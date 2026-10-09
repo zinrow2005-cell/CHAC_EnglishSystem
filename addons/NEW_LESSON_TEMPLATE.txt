@@ -1,0 +1,14 @@
+/* 範例：建立 addons/h/lesson-h.js，並在 addons/manifest.js 的 PB_ADDON_FILES 加上對應路徑。
+   所有資源應先上傳；圖片檔名與 word 欄位一致，全部使用英文小寫。*/
+(function(){
+  var newWords = [
+    {letter:'H',word:'hat',zh:'帽子',sentence:'A blue hat.',translation:'一頂藍色帽子。',note:'hat 是帽子。'}
+  ];
+  var existing = {};
+  window.PB_DATA.words.forEach(function(w){existing[w.word]=true});
+  newWords.forEach(function(w){if (!existing[w.word]) window.PB_DATA.words.push(w)});
+  window.PB_DATA.phonics.H=['/h/','輕輕吐氣發 /h/'];
+  window.PB_LESSONS.H={name:'H 的發音',description:'跟著老師練習 /h/ 的發音。'};
+  // 若補充短句圖片，請另附檔案並放到 assets/scenes 或 addons/h/scenes
+  // 老師原音需經核對後才加入；不要把整段課堂錄音當單字片段。
+})();
