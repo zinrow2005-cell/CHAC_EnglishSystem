@@ -1,24 +1,25 @@
-# Alphabet Adventure V49｜GitHub 雙包上傳版
+# CHAC英文系統 V50.0 — GitHub Pages PWA
 
-## 內容
-A～G 38 個單字、38 張學習蠟筆圖、38 張遊戲純圖、7 張短句情境圖、4 份老師完整錄音、38 段候選音訊片段。原有專注學習與四種遊戲均保留。
+## 上傳順序
 
-## GitHub 上傳規則
-網頁一次選取的檔案數建議小於 100；本專案分兩個壓縮包，每包低於 100 個實際檔案。**GitHub 不會自動解壓 ZIP**，請依下面說明在電腦先解壓、再上傳裡面的檔案與資料夾。
+1. 解壓 `CHAC_V50_01_MAIN_PWA.zip`，將**壓縮包內的檔案與資料夾**上傳至 GitHub 儲存庫根目錄，提交變更。
+2. 解壓 `CHAC_V50_02_MEDIA.zip`，同樣上傳至**同一儲存庫的根目錄**，提交變更。不要把 ZIP 本身直接上傳作為網頁。
+3. 確認 `index.html`、`manifest.webmanifest`、`sw.js` 均在儲存庫根目錄；`assets/`、`audio/` 與 `addons/` 結構保持不變。
+4. Settings → Pages → Deploy from a branch → main / (root)。等待發布完成，在手機瀏覽器打開發布網址。
 
-1. 解壓 `V49_01_MAIN.zip`，將內部內容上傳到 GitHub 儲存庫的根目錄（必須包含 `index.html`）。按 Commit changes。
-2. 解壓 `V49_02_MEDIA.zip`，將內部內容繼續上傳到**同一儲存庫的根目錄**。按 Commit changes。
-3. 若 GitHub 網頁不會保留整個資料夾結構，可以在 GitHub 網頁進入對應 `assets/game-pictures` 或 `audio/clips` 目錄再拖曳檔案。不要把所有圖片放到根目錄。
-4. Settings → Pages：Deploy from a branch → `main` → `/ (root)`，儲存後等待部署；GitHub Pages 網址通常是 `https://帳號.github.io/儲存庫名稱/`。
-5. 若仍出現舊畫面，重新整理、清除網站快取；本版靜態資源查詢參數已更新為 V49。
+## 手機安裝
 
-## 未來教材新增方式
+- iPhone / iPad：以 Safari 開啟網址 → 分享 → 加入主畫面。舊版 iPad Safari 可能不支援完整離線功能。
+- Android：以 Chrome 開啟網站，使用安裝應用程式／新增至主畫面。
+- 主畫面名稱為 **CHAC英文系統**，圖示使用使用者選定的 ABC＋故事書＋背包蠟筆畫。
 
-- 新字母與單字都做成獨立資料包，例如 `addons/h/lesson-h.js`、`assets/words/hat.jpg`、`assets/game-pictures/hat.jpg`。
-- 把資料包 JS 路徑寫入 `addons/manifest.js` 的 `PB_ADDON_FILES`，只需覆蓋這個小檔與新增媒體，不須重傳 A～G 全站。
-- 格式請參考 `addons/NEW_LESSON_TEMPLATE.txt`。資料包在主系統啟動前載入，導航會自動出現 H 等新字母。
-- 舊的 A～G 原音播放器不會自動包含 H；未來新增錄音前，仍需確認時間範圍、分段及對應的教師說明。
-- 增加補充包時，請分批上傳，每批少於 100 個檔案。使用同一儲存庫；**不要另外開 GitHub Pages 網站**。
+## PWA 說明
 
-## 注意
-原本老師錄音切點仍是候選分段，並非逐字核對最終版。版本重整不會清除同一網址、同一瀏覽器儲存的收藏、星星與學習紀錄；若更改網站網域或儲存庫路徑，瀏覽器儲存資料不會自動搬移。
+- HTTPS GitHub Pages 可使用 manifest 與 service worker。透過 `file://` 雙擊 HTML 只是預覽，無法測試 PWA 安裝。
+- 核心 HTML/CSS/JS 快取以支援基礎離線開啟；圖卡、音訊採**開啟後快取**，首次離線前必須在線上瀏覽相應教材。不能保證尚未打開過的音檔離線可用。
+- iOS 系統對離線與儲存空間有自己的限制；此系統不會上傳學生的進度，仍保存在使用裝置的瀏覽器內。
+- 後續擴充教材沿用 `addons/` 架構。更改程式後請更新 service worker 的快取版號，避免舊版檔案殘留。
+
+## 文件限制
+
+兩包均少於 100 個檔案，目錄結構可直接合併。GitHub 網頁上傳時可分兩次提交。
