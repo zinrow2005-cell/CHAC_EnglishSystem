@@ -200,3 +200,122 @@ button{touch-action:manipulation;}
  .quizpanel .completion button{width:100%;margin:7px 0;min-width:0}
  .quizhead{gap:6px}.quizhead button{flex-shrink:0}
 }
+
+/* V53 — compact learning cards: keep drawings and sentences legible */
+.wordgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start}
+.wordcard{align-self:start;border-radius:19px}
+.illustration{height:156px;background:#f4f9fe}
+.illustration img,.wordcard .illustration img{object-fit:contain}
+.cardbody{padding:12px 13px 13px;gap:0}
+.wordtitle h3{font-size:25px;overflow-wrap:anywhere}
+.round-sound{width:43px;height:43px;font-size:19px;flex:none}
+.zh{font-size:16px;margin:0 0 9px}
+.sentenceblock{padding:10px 11px;gap:4px;border-radius:12px}
+.sentenceblock strong{font-size:16px;line-height:1.38}
+.sentenceblock p{font-size:13px;line-height:1.35}
+.sentenceblock button{padding:9px 11px;margin-top:4px;font-size:13px}
+.lesson-note{margin-top:8px;padding:8px 10px;font-size:13px}
+.teacher-scene{margin-top:8px;padding:8px 10px}
+.cardactions{margin-top:0;padding-top:9px;gap:6px}
+.cardactions button{min-height:39px;padding:8px 5px;font-size:12px}
+.letter-chip{top:7px;left:8px;font-size:12px;padding:4px 8px}
+@media(max-width:1100px){.wordgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:780px){.wordgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.illustration{height:164px}}
+@media(max-width:520px){.wordgrid{grid-template-columns:1fr;gap:12px}.wordcard{display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr);align-items:start}.illustration{height:170px;align-self:start}.cardbody{padding:11px;min-width:0}.wordtitle h3{font-size:24px}.sentenceblock strong{font-size:16px}.cardactions button{font-size:12px}.teacher-scene-body{flex-direction:column}}
+@media(max-width:375px){.wordcard{grid-template-columns:1fr}.illustration{height:175px}}
+
+/* V54 responsive card refinements: comfortable images and 44px touch targets */
+.wordgrid {align-items:start}
+.wordcard {min-width:0; height:auto}
+.wordcard .cardbody {min-width:0}
+.wordcard .illustration {min-width:0; overflow:hidden}
+.wordcard .illustration img {width:100%;height:100%;object-fit:contain}
+.wordcard .cardactions button {min-height:44px}
+.wordcard .round-sound {width:46px;height:46px;min-width:46px;min-height:46px}
+@media (min-width:1101px) and (max-width:1280px) {
+ .wordgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+}
+@media (min-width:651px) and (max-width:900px){
+ .wordgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .wordcard .illustration{height:188px}
+ .wordcard .sentenceblock strong{font-size:17px}
+ .wordcard .cardactions button{font-size:14px}
+}
+@media (max-width:650px){
+ .wordgrid{grid-template-columns:1fr;gap:12px}
+ .wordcard{display:grid;grid-template-columns:minmax(125px,38%) minmax(0,1fr);align-items:start}
+ .wordcard .illustration{height:100%;min-height:212px;align-self:stretch}
+ .wordcard .cardbody{padding:12px;min-width:0}
+ .wordcard .sentenceblock{padding:10px;min-width:0}
+ .wordcard .sentenceblock strong{font-size:16px}
+ .wordcard .cardactions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+ .wordcard .cardactions button{font-size:13px;padding:8px 4px;min-height:44px;min-width:0}
+ .wordcard .cardactions button:last-child:nth-child(odd){grid-column:1/-1}
+ .wordcard .round-sound{width:46px;height:46px}
+ .wordcard .teacher-scene-body{flex-direction:column;align-items:stretch}
+}
+@media (max-width:420px){
+ .wordcard{display:flex;flex-direction:column}
+ .wordcard .illustration{height:205px;width:100%;min-height:0}
+ .wordcard .cardbody{width:100%;padding:13px}
+ .wordcard .wordtitle h3{font-size:26px}
+ .wordcard .sentenceblock strong{font-size:17px}
+ .wordcard .cardactions button{font-size:14px}
+}
+@media (orientation:landscape) and (max-height:520px) and (max-width:950px){
+ .wordgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .wordcard{display:flex;flex-direction:column}
+ .wordcard .illustration{height:145px;min-height:0;width:100%}
+ .wordcard .cardbody{width:100%}
+ .wordcard .cardactions{display:flex;flex-wrap:wrap}
+ .wordcard .cardactions button{flex:1 1 40%}
+}
+
+/* V55: child-first flow and simplified navigation. */
+.v55-dashboard{display:none;max-width:1100px;margin:12px auto 26px}
+.v55-welcome{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;border-radius:26px;background:linear-gradient(115deg,#e6f6ff,#f9ecff 55%,#fff1d7);border:1px solid #d9e8f5}
+.v55-welcome h2{font-size:clamp(25px,3vw,36px);color:#2459a3;margin:0 0 7px}.v55-welcome p{margin:4px 0 14px}.v55-welcome>img{width:112px;height:112px;object-fit:contain}.v55-meter{display:flex;align-items:center;justify-content:space-between;gap:15px;font-weight:800;font-size:15px}.v55-meter-track{height:11px;background:#ffffffb8;border-radius:99px;overflow:hidden;margin-top:9px}.v55-meter-track>div{height:100%;width:0;background:#43b884;border-radius:99px;transition:width .3s}
+.v55-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:17px}.v55-bigchoice{display:flex;align-items:center;gap:15px;padding:18px;text-align:left;border-radius:24px;min-height:145px}.v55-bigchoice img{height:92px;width:92px;object-fit:contain;flex-shrink:0}.v55-bigchoice span{display:flex;flex-direction:column;gap:7px}.v55-bigchoice strong{font-size:25px}.v55-bigchoice small{font-size:14px;line-height:1.45}.v55-choice-learn{background:#e4f5ff;border-color:#badffc}.v55-choice-game{background:#fff0d9;border-color:#ffe0ad}.v55-quick{min-height:70px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:19px;border-radius:20px}.v55-quick img{width:46px;height:46px;object-fit:contain}.v55-browse{display:block;width:100%;margin-top:14px;background:white;min-height:54px}.v55-tabs{position:sticky;top:61px;z-index:19;display:flex;justify-content:center;gap:7px;background:#f3f8fee8;backdrop-filter:blur(8px);padding:10px 2px;margin:0 0 10px}.v55-tabs button{flex:1;max-width:170px;min-height:48px;padding:9px 7px}.v55-tabs button.selected{background:#317ce9;color:#fff;border-color:#317ce9}
+body[data-v55-view="home"] .v55-dashboard{display:block}
+body[data-v55-view] .hero,body[data-v55-view] .letters,body[data-v55-view] .teacher,body[data-v55-view] #v6FocusLaunch,body[data-v55-view] #learnSection,body[data-v55-view] #gamesSection,body[data-v55-view] #progressSection{display:none}
+body[data-v55-view="learn"] .letters,body[data-v55-view="learn"] #v6FocusLaunch,body[data-v55-view="learn"] #learnSection{display:revert}
+body[data-v55-view="teacher"] .teacher{display:block}
+body[data-v55-view="games"] #gamesSection{display:flex}
+body[data-v55-view="progress"] #progressSection{display:block}
+body[data-v55-view="learn"] .letters{display:grid}
+@media(max-width:650px){.v55-tabs{top:100px;gap:3px}.v55-tabs button{font-size:12px;min-height:46px;padding:6px 1px}.v55-choices{gap:10px}.v55-bigchoice{min-height:145px;padding:12px;flex-direction:column;text-align:center;gap:6px}.v55-bigchoice img{width:75px;height:75px}.v55-bigchoice strong{font-size:20px}.v55-bigchoice small{font-size:12px}.v55-welcome{padding:17px}.v55-welcome>img{width:73px;height:73px}.v55-quick{font-size:14px;min-height:65px;padding:6px}.v55-quick img{width:32px;height:32px}}
+@media(max-width:380px){.v55-tabs{top:102px}.v55-welcome>img{width:50px;height:50px}.v55-bigchoice strong{font-size:18px}}
+
+/* V56: dynamic sticky offset and touch-friendly overlay on compact Safari screens */
+.v55-tabs{top:var(--chac-header-height,65px)}
+html{scroll-padding-top:calc(var(--chac-header-height,65px) + 65px)}
+.v6-dialog,.quizpanel{-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.v6-overlay,.overlay{padding-bottom:max(12px,env(safe-area-inset-bottom))}
+.v6-controls button,.v6-navigation button,.v55-tabs button{touch-action:manipulation}
+@media(max-width:650px){.v55-tabs{top:var(--chac-header-height,100px)}.v55-tabs{position:sticky}.v6-dialog{max-height:calc(100dvh - 24px)} }
+@media(max-width:380px){.v55-tabs{top:var(--chac-header-height,100px)}}
+@media(orientation:landscape) and (max-height:560px){.v6-dialog{max-height:calc(100dvh - 16px)}.v55-tabs{padding:4px 2px}.v55-tabs button{min-height:40px}}
+
+/* V57 Focus sound transport: thumb friendly, no layout shift. */
+.v57-audio-toolbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 4px}
+.v57-audio-toolbar button{min-height:48px;background:#f0f7ff;border:1px solid #b9d6f6;font-size:16px;font-weight:800}
+.v57-audio-toolbar button:disabled{opacity:.55;cursor:default}
+.v57-audio-state{min-height:22px;font-size:13px;color:#536b86;text-align:center;padding:3px 6px}
+@media(max-width:390px){.v57-audio-toolbar{gap:7px}.v57-audio-toolbar button{font-size:14px;padding:10px 4px}}
+
+/* V58 picture-first audio, Safari compatible */
+#v58PictureTap{position:relative;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;outline-offset:-4px;}
+#v58PictureTap:focus-visible{outline:4px solid #347bf1;border-radius:18px;}
+.v58-picture-hint{position:absolute;right:12px;bottom:10px;border-radius:18px;padding:7px 12px;background:rgba(255,255,255,.95);color:#245c9e;font-size:14px;font-weight:800;box-shadow:0 2px 8px #28518d24;pointer-events:none;}
+#v58PictureTap.is-speaking{outline:3px solid #76b6ef;outline-offset:-3px;}
+#v57AudioState{min-height:24px;}
+@media(max-width:650px){.v58-picture-hint{font-size:13px;right:7px;bottom:7px;padding:6px 9px}}
+
+/* V59: child-first focus listening feedback, no animation-heavy effect on older iPad */
+#v58PictureTap{min-height:200px;transition:outline-color .15s ease}
+#v58PictureTap.is-speaking{outline:4px solid #3381dc;outline-offset:-4px;background:#e9f4ff}
+#v58PictureTap.is-speaking .v58-picture-hint{background:#246bc5;color:#fff;font-size:16px}
+.v6-controls button.is-playing{background:#d7ebff!important;border:2px solid #337ce0!important;color:#144f92!important;box-shadow:inset 0 0 0 1px #fff}
+.v57-audio-state{font-size:16px;font-weight:800;min-height:42px;background:#f0f8ff;border-radius:12px;padding:10px;color:#2b679b}
+@media(max-width:650px){.v58-picture-hint{font-size:15px;padding:9px 12px}.v57-audio-state{font-size:15px}.v6-controls button{min-height:52px}}
+@media(prefers-reduced-motion:reduce){#v58PictureTap{transition:none}}
