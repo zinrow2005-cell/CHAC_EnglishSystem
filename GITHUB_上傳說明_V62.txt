@@ -1,0 +1,9 @@
+CHAC英文系統 V62 完整重建包
+
+1. 第一包解壓後全部檔案上傳 GitHub 儲存庫根目錄，Commit。
+2. 第二包解壓後同樣保持 audio/、assets/ 路徑，上傳同一儲存庫，Commit。
+3. GitHub Pages 來源選 main /(root)。確保 index.html 位於根目錄。
+4. 更新後先用瀏覽器開啟網站，確認 V62.0，再重啟 PWA。
+
+注意：H～J 目前只有完整老師錄音（老師頁顯示待校對），沒有 H～J 正式單字卡。
+這兩包合併後才是完整網站；不要直接將 ZIP 本身上傳期待 GitHub Pages 自動解壓。
