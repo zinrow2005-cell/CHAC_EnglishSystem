@@ -12,7 +12,7 @@
    if(view==='home')refresh();
    if(scroll)window.scrollTo({top:0,behavior:'auto'});syncHeaderOffset();
  }
- function refresh(){try{const learned=JSON.parse(localStorage.getItem('pbDone')||'[]');const done=Array.isArray(learned)?learned.length:0;const total=window.PB_DATA?.words?.length||38;const name=$('v55ProgressLabel');if(name)name.textContent=`已學會 ${done} / ${total} 個單字`;const p=$('v55ProgressBar');if(p)p.style.width=(Math.min(100,100*done/total)||0)+'%';const count=$('v55StarCount');if(count)count.textContent=String(Number(localStorage.getItem('pbStars')||0))}catch(e){}}
+ function refresh(){try{const learned=JSON.parse(localStorage.getItem('pbDone')||'[]');const done=Array.isArray(learned)?learned.length:0;const total=window.PB_DATA?.words?.length||54;const name=$('v55ProgressLabel');if(name)name.textContent=`已學會 ${done} / ${total} 個單字`;const p=$('v55ProgressBar');if(p)p.style.width=(Math.min(100,100*done/total)||0)+'%';const count=$('v55StarCount');if(count)count.textContent=String(Number(localStorage.getItem('pbStars')||0))}catch(e){}}
  document.querySelectorAll('[data-v55-target]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.v55Target)));
  $('v55Start')?.addEventListener('click',()=>{go('learn',false);$('v6Open')?.click()});
  $('v55Continue')?.addEventListener('click',()=>{go('learn',false);$('v6Open')?.click()});
@@ -23,6 +23,6 @@
  $('letters')?.addEventListener('click',e=>{if(e.target.closest('[data-letter]'))go('learn',false)},true);
  $('progressGrid')?.addEventListener('click',e=>{if(e.target.closest('[data-progress]'))go('learn',false)},true);
  window.addEventListener('pb-progress-changed',refresh);window.addEventListener('storage',refresh);
- const prefetch=()=>{const imgs=window.PB_DATA?.words?.slice(0,3)||[];imgs.forEach(w=>{if(w.word){const img=new Image();img.src=`assets/words/${w.word}.jpg`}})};
+ const prefetch=()=>{const imgs=window.PB_DATA?.words?.slice(0,3)||[];imgs.forEach(w=>{if(w.word){const img=new Image();img.src=`assets/words/${w.word}.jpg?v=623`}})};
  refresh();go('home',false);if('requestIdleCallback'in window)requestIdleCallback(prefetch);else setTimeout(prefetch,400);
 })();
