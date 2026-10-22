@@ -363,3 +363,15 @@ html{scroll-padding-top:calc(var(--chac-header-height,65px) + 65px)}
 @media(max-width:650px){.wordcard .illustration{height:240px!important;padding:10px!important}}
 @media(min-width:651px) and (max-width:900px){.wordcard .illustration{height:215px!important}}
 @media(orientation:landscape) and (max-height:520px){.wordcard .illustration{height:190px!important}}
+
+/* V62.8 QA fix: opaque sticky navigation and correct small-screen tab offset. */
+header{background:#fff;}
+.v55-tabs{background:#f3f8fe;backdrop-filter:none;-webkit-backdrop-filter:none;}
+#learnSection,#wordgrid{scroll-margin-top:calc(var(--chac-header-height,65px) + 86px);}
+.wordcard{scroll-margin-top:calc(var(--chac-header-height,65px) + 90px);}
+@media(max-width:580px){
+  /* Header is non-sticky on small devices: don't reserve its height for the sticky tabs. */
+  .v55-tabs{top:0!important;}
+  #learnSection,#wordgrid{scroll-margin-top:75px;}
+  .wordcard{scroll-margin-top:75px;}
+}
