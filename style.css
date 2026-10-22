@@ -325,3 +325,41 @@ html{scroll-padding-top:calc(var(--chac-header-height,65px) + 65px)}
 
 /* V61 spelling puzzle: touch-friendly, old iPad Safari compatible */
 .spell-status{color:#5276a7;font-size:15px;font-weight:800;margin-top:12px}.spell-intro{text-align:center;font-size:19px;font-weight:800;margin:10px 0}.spell-picture{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;margin:0 auto;background:#f4faff;max-width:370px;width:100%;padding:10px;border-radius:18px}.spell-picture img{height:185px;max-width:100%;object-fit:contain}.spell-picture span{font-size:15px}.spell-hanzi{text-align:center;font-size:18px;color:#567598;font-weight:800;margin:9px}.spell-slots,.spell-tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:14px 0}.spell-slot,.spell-tiles button{width:47px;height:54px;min-width:0;padding:3px;border-radius:10px;font-size:25px;font-weight:900;text-align:center}.spell-slot{border:2px dashed #a8c9ee;background:#f6faff;color:#2d69bb}.spell-slot.filled{border-style:solid;background:#dfefff}.spell-tiles button{background:#ffde7a;border:2px solid #e8ba4b;color:#714600}.spell-tiles button:disabled{visibility:hidden}.spell-feedback{text-align:center;min-height:42px;font-size:17px;font-weight:850}.spell-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.spell-actions button{min-height:48px;flex:1 1 120px}.spell-actions button[hidden]{display:none}@media(max-width:650px){.spell-picture img{height:155px}.spell-slot,.spell-tiles button{width:39px;height:48px;font-size:22px}.spell-slots,.spell-tiles{gap:5px}.spell-intro{font-size:17px}}@media(max-width:370px){.spell-slot,.spell-tiles button{width:34px;height:44px;font-size:19px;gap:3px}}
+
+/* CHAC V62.5: image-first crayon cards; reduce internal blank space without cropping. */
+.wordcard .illustration {
+ background:#f8f4e8; height:210px; min-height:0; padding:0;
+ display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.wordcard .illustration img {
+ display:block;width:100%;height:100%;object-fit:contain!important;object-position:center center;
+ image-rendering:auto;filter:none;
+}
+.wordcard .letter-chip {top:9px;left:10px;z-index:1;background:rgba(255,255,255,.93)}
+.v6-picture, #v58PictureTap {
+ width:100%;height:clamp(245px,34vh,345px);min-height:0;max-width:650px;
+ margin:12px auto 8px;padding:8px;border-radius:20px;background:#f8f4e8;
+ display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.v6-picture img,#v6Picture {width:100%;height:100%;object-fit:contain!important;object-position:center;display:block}
+@media (min-width:651px) and (max-width:900px){.wordcard .illustration{height:220px}}
+@media (max-width:650px){
+ .wordcard .illustration{height:220px;min-height:0;align-self:stretch}
+ .v6-picture,#v58PictureTap{height:clamp(235px,33vh,315px);padding:5px}
+}
+@media (max-width:420px){.wordcard .illustration{height:225px;min-height:0;width:100%}}
+@media (orientation:landscape) and (max-height:520px){
+ .wordcard .illustration{height:168px;min-height:0}
+ .v6-picture,#v58PictureTap{height:195px;min-height:0}
+}
+
+/* V62.7: artwork has at least 85px physical safety margin; never crop cards. */
+.wordcard .illustration{height:238px!important;background:#f8f4e8!important;padding:12px!important;overflow:hidden;}
+.wordcard .illustration img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;}
+#v58PictureTap{overflow:hidden!important;padding:12px!important;background:#f8f4e8!important;}
+#v6Picture{max-height:100%;max-width:100%;object-fit:contain!important;object-position:center center!important;}
+.letter-loading{grid-column:1/-1;min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;background:#f8f4e8;color:#516f91;border:1px dashed #d6dfe9;border-radius:21px;font-size:18px;font-weight:800;padding:22px;}
+.wordgrid.is-switching{min-height:220px;}
+@media(max-width:650px){.wordcard .illustration{height:240px!important;padding:10px!important}}
+@media(min-width:651px) and (max-width:900px){.wordcard .illustration{height:215px!important}}
+@media(orientation:landscape) and (max-height:520px){.wordcard .illustration{height:190px!important}}

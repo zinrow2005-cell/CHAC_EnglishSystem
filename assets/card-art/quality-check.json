@@ -1,0 +1,1028 @@
+[
+  {
+    "word": "ambulance",
+    "source_object_bbox": [
+      112,
+      47,
+      667,
+      472
+    ],
+    "safe_margin_px": [
+      135,
+      79,
+      136,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "anchor",
+    "source_object_bbox": [
+      153,
+      47,
+      626,
+      473
+    ],
+    "safe_margin_px": [
+      182,
+      79,
+      183,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "ant",
+    "source_object_bbox": [
+      112,
+      49,
+      669,
+      470
+    ],
+    "safe_margin_px": [
+      131,
+      79,
+      132,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "apple",
+    "source_object_bbox": [
+      176,
+      47,
+      603,
+      472
+    ],
+    "safe_margin_px": [
+      208,
+      79,
+      208,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "arrow",
+    "source_object_bbox": [
+      151,
+      43,
+      628,
+      473
+    ],
+    "safe_margin_px": [
+      183,
+      79,
+      183,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "axe",
+    "source_object_bbox": [
+      132,
+      47,
+      647,
+      473
+    ],
+    "safe_margin_px": [
+      159,
+      79,
+      159,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "bag",
+    "source_object_bbox": [
+      154,
+      48,
+      625,
+      472
+    ],
+    "safe_margin_px": [
+      182,
+      79,
+      183,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "ball",
+    "source_object_bbox": [
+      162,
+      47,
+      617,
+      473
+    ],
+    "safe_margin_px": [
+      193,
+      79,
+      193,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "banana",
+    "source_object_bbox": [
+      142,
+      47,
+      636,
+      473
+    ],
+    "safe_margin_px": [
+      171,
+      79,
+      171,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "bed",
+    "source_object_bbox": [
+      103,
+      50,
+      677,
+      470
+    ],
+    "safe_margin_px": [
+      121,
+      79,
+      121,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "bus",
+    "source_object_bbox": [
+      137,
+      48,
+      643,
+      472
+    ],
+    "safe_margin_px": [
+      162,
+      79,
+      163,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "candles",
+    "source_object_bbox": [
+      168,
+      46,
+      610,
+      473
+    ],
+    "safe_margin_px": [
+      201,
+      79,
+      201,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "car",
+    "source_object_bbox": [
+      107,
+      67,
+      674,
+      459
+    ],
+    "safe_margin_px": [
+      101,
+      79,
+      102,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "cat",
+    "source_object_bbox": [
+      132,
+      47,
+      621,
+      473
+    ],
+    "safe_margin_px": [
+      173,
+      79,
+      174,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "comb",
+    "source_object_bbox": [
+      154,
+      47,
+      625,
+      472
+    ],
+    "safe_margin_px": [
+      183,
+      79,
+      183,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "cup",
+    "source_object_bbox": [
+      176,
+      47,
+      604,
+      472
+    ],
+    "safe_margin_px": [
+      207,
+      79,
+      208,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "desk",
+    "source_object_bbox": [
+      194,
+      47,
+      586,
+      472
+    ],
+    "safe_margin_px": [
+      228,
+      79,
+      228,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "dog",
+    "source_object_bbox": [
+      186,
+      47,
+      592,
+      472
+    ],
+    "safe_margin_px": [
+      220,
+      79,
+      220,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "donkey",
+    "source_object_bbox": [
+      199,
+      48,
+      582,
+      472
+    ],
+    "safe_margin_px": [
+      232,
+      79,
+      233,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "door",
+    "source_object_bbox": [
+      243,
+      47,
+      536,
+      473
+    ],
+    "safe_margin_px": [
+      284,
+      79,
+      285,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "duck",
+    "source_object_bbox": [
+      201,
+      47,
+      578,
+      473
+    ],
+    "safe_margin_px": [
+      237,
+      79,
+      237,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "egg",
+    "source_object_bbox": [
+      218,
+      47,
+      563,
+      472
+    ],
+    "safe_margin_px": [
+      254,
+      79,
+      255,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "elbow",
+    "source_object_bbox": [
+      182,
+      47,
+      601,
+      472
+    ],
+    "safe_margin_px": [
+      212,
+      79,
+      213,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "elephant",
+    "source_object_bbox": [
+      150,
+      47,
+      630,
+      473
+    ],
+    "safe_margin_px": [
+      178,
+      79,
+      179,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "engine",
+    "source_object_bbox": [
+      177,
+      47,
+      602,
+      473
+    ],
+    "safe_margin_px": [
+      210,
+      79,
+      210,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "envelope",
+    "source_object_bbox": [
+      124,
+      48,
+      656,
+      473
+    ],
+    "safe_margin_px": [
+      148,
+      79,
+      149,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "fence",
+    "source_object_bbox": [
+      108,
+      79,
+      672,
+      441
+    ],
+    "safe_margin_px": [
+      88,
+      88,
+      88,
+      88
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "finger",
+    "source_object_bbox": [
+      255,
+      47,
+      525,
+      472
+    ],
+    "safe_margin_px": [
+      297,
+      79,
+      297,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "fire",
+    "source_object_bbox": [
+      205,
+      47,
+      575,
+      473
+    ],
+    "safe_margin_px": [
+      241,
+      79,
+      241,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "fish",
+    "source_object_bbox": [
+      130,
+      48,
+      650,
+      472
+    ],
+    "safe_margin_px": [
+      154,
+      79,
+      155,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "five",
+    "source_object_bbox": [
+      235,
+      48,
+      544,
+      472
+    ],
+    "safe_margin_px": [
+      274,
+      79,
+      275,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "foot",
+    "source_object_bbox": [
+      165,
+      40,
+      595,
+      472
+    ],
+    "safe_margin_px": [
+      210,
+      79,
+      211,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "garage",
+    "source_object_bbox": [
+      120,
+      47,
+      659,
+      472
+    ],
+    "safe_margin_px": [
+      144,
+      79,
+      145,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "garden",
+    "source_object_bbox": [
+      108,
+      49,
+      670,
+      471
+    ],
+    "safe_margin_px": [
+      129,
+      79,
+      130,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "gate",
+    "source_object_bbox": [
+      120,
+      48,
+      660,
+      490
+    ],
+    "safe_margin_px": [
+      156,
+      79,
+      156,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "girl",
+    "source_object_bbox": [
+      202,
+      48,
+      577,
+      473
+    ],
+    "safe_margin_px": [
+      237,
+      79,
+      238,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "goat",
+    "source_object_bbox": [
+      183,
+      48,
+      596,
+      472
+    ],
+    "safe_margin_px": [
+      215,
+      79,
+      216,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "gun",
+    "source_object_bbox": [
+      94,
+      59,
+      686,
+      460
+    ],
+    "safe_margin_px": [
+      94,
+      79,
+      95,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "hair",
+    "source_object_bbox": [
+      210,
+      77,
+      569,
+      443
+    ],
+    "safe_margin_px": [
+      214,
+      79,
+      214,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "hand",
+    "source_object_bbox": [
+      237,
+      60,
+      541,
+      461
+    ],
+    "safe_margin_px": [
+      267,
+      79,
+      268,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "hat",
+    "source_object_bbox": [
+      210,
+      127,
+      569,
+      394
+    ],
+    "safe_margin_px": [
+      126,
+      79,
+      126,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "horse",
+    "source_object_bbox": [
+      216,
+      65,
+      564,
+      454
+    ],
+    "safe_margin_px": [
+      234,
+      79,
+      235,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "house",
+    "source_object_bbox": [
+      215,
+      72,
+      563,
+      447
+    ],
+    "safe_margin_px": [
+      226,
+      79,
+      227,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "ill",
+    "source_object_bbox": [
+      220,
+      47,
+      559,
+      473
+    ],
+    "safe_margin_px": [
+      258,
+      79,
+      259,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "inch",
+    "source_object_bbox": [
+      221,
+      131,
+      559,
+      389
+    ],
+    "safe_margin_px": [
+      134,
+      79,
+      135,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "ink",
+    "source_object_bbox": [
+      246,
+      86,
+      542,
+      434
+    ],
+    "safe_margin_px": [
+      245,
+      79,
+      246,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "insect",
+    "source_object_bbox": [
+      225,
+      96,
+      555,
+      425
+    ],
+    "safe_margin_px": [
+      208,
+      79,
+      209,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "invitation",
+    "source_object_bbox": [
+      241,
+      91,
+      539,
+      428
+    ],
+    "safe_margin_px": [
+      237,
+      79,
+      237,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "jacket",
+    "source_object_bbox": [
+      221,
+      94,
+      559,
+      425
+    ],
+    "safe_margin_px": [
+      204,
+      79,
+      204,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "jam",
+    "source_object_bbox": [
+      225,
+      51,
+      554,
+      469
+    ],
+    "safe_margin_px": [
+      260,
+      79,
+      261,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "jar",
+    "source_object_bbox": [
+      232,
+      101,
+      544,
+      418
+    ],
+    "safe_margin_px": [
+      213,
+      79,
+      213,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "jelly",
+    "source_object_bbox": [
+      216,
+      129,
+      563,
+      397
+    ],
+    "safe_margin_px": [
+      138,
+      79,
+      138,
+      79
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "jug",
+    "source_object_bbox": [
+      237,
+      78,
+      543,
+      443
+    ],
+    "safe_margin_px": [
+      248,
+      79,
+      248,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  },
+  {
+    "word": "jungle",
+    "source_object_bbox": [
+      222,
+      48,
+      558,
+      473
+    ],
+    "safe_margin_px": [
+      259,
+      79,
+      260,
+      80
+    ],
+    "output_size": [
+      900,
+      640
+    ]
+  }
+]
