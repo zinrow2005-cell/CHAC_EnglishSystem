@@ -1,7 +1,7 @@
 (()=>{'use strict';
 const words=window.PB_DATA.words,$=id=>document.getElementById(id),overlay=$('quizOverlay'),body=$('quizBody');
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
-const image=w=>`<img src="assets/game-pictures/${encodeURIComponent(w.word)}.jpg?v=623" alt="${escapeHtml(w.zh)}" onerror="this.hidden=true;this.parentNode.classList.add('image-missing')">`;
+const image=w=>`<img src="assets/game-pictures/${encodeURIComponent(w.word)}.jpg?v=630" alt="${escapeHtml(w.zh)}" onerror="this.hidden=true;this.parentNode.classList.add('image-missing')">`;
 const shuffle=a=>{let b=[...a];for(let i=b.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b};
 const current=()=>window.CHAC_GAME_POOL?window.CHAC_GAME_POOL():(()=>{const l=document.querySelector('.letter.active')?.dataset.letter||'A';return words.filter(w=>w.letter===l)})();
 let running=false,score=0,mode='',selected=null,open=[],pairs=0,busy=false,turn=0,sessionRewarded=false;

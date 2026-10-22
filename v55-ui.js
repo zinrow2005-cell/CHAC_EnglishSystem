@@ -23,6 +23,6 @@
  $('letters')?.addEventListener('click',e=>{if(e.target.closest('[data-letter]'))go('learn',false)},true);
  $('progressGrid')?.addEventListener('click',e=>{if(e.target.closest('[data-progress]'))go('learn',false)},true);
  window.addEventListener('pb-progress-changed',refresh);window.addEventListener('storage',refresh);
- const prefetch=()=>{const imgs=window.PB_DATA?.words?.slice(0,3)||[];imgs.forEach(w=>{if(w.word){const img=new Image();img.src=`assets/card-art/${w.word}.jpg?v=627`}})};
+ const prefetch=()=>{const imgs=window.PB_DATA?.words?.slice(0,3)||[];imgs.forEach(w=>{if(w.word){const img=new Image();img.src=`assets/card-art/${w.word}.jpg?v=630`}})};
  refresh();go('home',false);if('requestIdleCallback'in window)requestIdleCallback(prefetch);else setTimeout(prefetch,400);
 })();
