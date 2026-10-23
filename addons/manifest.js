@@ -5,5 +5,5 @@ window.PB_ADDON_FILES = [
 ];
 window.PB_ADDON_FILES.forEach(function(path){
   if (!/^addons\/[a-z0-9_\/-]+\.js$/i.test(path) || path.indexOf('..') !== -1) return;
-  document.write('<script src="' + path + '?v=62"><\/script>');
+  document.write('<script src="' + path + '?v=633"><\/script>');
 });

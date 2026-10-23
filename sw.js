@@ -1,11 +1,11 @@
-/* CHAC英文系統 v63.0 — scoped GitHub Pages PWA service worker */
-const CACHE = 'chac-english-v630-shell';
-const MEDIA = 'chac-english-v630-media';
+/* CHAC英文系統 v63.3 — scoped GitHub Pages PWA service worker */
+const CACHE = 'chac-english-v633-shell';
+const MEDIA = 'chac-english-v633-media';
 const MAX_MEDIA_ITEMS = 260;
 const SHELL = [
   './', './index.html', './style.css', './app.js', './data.js', './lesson.js',
   './v55-ui.js', './game-scope.js', './spell-game.js', './v3.js', './v6.js', './v11.js', './v16.js', './v17.js', './v20.js',
-  './clipmap.js', './teacher-segments.js', './addons/manifest.js', './pwa-register.js',
+  './clipmap.js', './teacher-segments.js', './addons/manifest.js', './assets/scenes/scenes.js', './pwa-register.js',
   './manifest.webmanifest', './assets/pwa/icon-192.png', './assets/pwa/icon-512.png',
   './assets/pwa/icon-180.png'
 ];
