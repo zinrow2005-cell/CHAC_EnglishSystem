@@ -1,4 +1,4 @@
-/* CHAC A–J 課程：54 個單字與老師短語。修改時請保持 word 唯一且圖片檔名相同。 */
+/* CHAC 課程資料；新增單字請維持唯一 word 與相同資源檔名。錄音來源由 tracks 維護。 */
 window.PB_DATA = {
   "words": [
     {
@@ -496,6 +496,99 @@ window.PB_DATA = {
       "sentence": "In the jungle.",
       "translation": "在叢林裡。",
       "note": "in the jungle 是地點片語。"
+    },
+    {
+      "letter": "K",
+      "word": "king",
+      "zh": "國王",
+      "emoji": "👑",
+      "sentence": "King of the kangaroos.",
+      "translation": "袋鼠的國王。",
+      "note": "老師也示範 kangaroos（袋鼠，複數）；king 是國王。",
+      "pictureNote": "圖卡呈現戴皇冠的國王；袋鼠是老師短語中的補充字。"
+    },
+    {
+      "letter": "K",
+      "word": "key",
+      "zh": "鑰匙",
+      "emoji": "🔑",
+      "sentence": "A bunch of keys.",
+      "translation": "一串鑰匙。",
+      "note": "key 是鑰匙；一串鑰匙用複數 keys。錄音聽起來是 a bunch of key，字卡採標準文法。",
+      "pictureNote": "圖中有多把鑰匙串在一起。"
+    },
+    {
+      "letter": "K",
+      "word": "kettle",
+      "zh": "水壺／熱水壺",
+      "emoji": "🫖",
+      "sentence": "An electric kettle.",
+      "translation": "一個電熱水壺。",
+      "note": "electric 是電動的、用電的；此處指電熱水壺。",
+      "pictureNote": "圖片為有電源底座及插頭的電熱水壺。"
+    },
+    {
+      "letter": "K",
+      "word": "kite",
+      "zh": "風箏",
+      "emoji": "🪁",
+      "sentence": "A colorful kite.",
+      "translation": "一個彩色的風箏。",
+      "note": "colorful 表示多彩的、五顏六色的。"
+    },
+    {
+      "letter": "K",
+      "word": "kitchen",
+      "zh": "廚房",
+      "emoji": "🍳",
+      "sentence": "A small kitchen.",
+      "translation": "一個小廚房。",
+      "note": "small 是小的；kitchen 是料理食物的地方。"
+    },
+    {
+      "letter": "L",
+      "word": "lion",
+      "zh": "獅子",
+      "emoji": "🦁",
+      "sentence": "A lion is sleeping.",
+      "translation": "一隻獅子正在睡覺。",
+      "note": "sleeping 表示正在睡覺。老師在這段也說明 L 字首與字尾的發音位置。"
+    },
+    {
+      "letter": "L",
+      "word": "leaf",
+      "zh": "葉子",
+      "emoji": "🍃",
+      "sentence": "A green leaf.",
+      "translation": "一片綠色的葉子。",
+      "note": "leaf 是一片葉子；複數為 leaves（補充）。"
+    },
+    {
+      "letter": "L",
+      "word": "lamp",
+      "zh": "燈／檯燈",
+      "emoji": "💡",
+      "sentence": "A table lamp.",
+      "translation": "一盞桌上型檯燈。",
+      "note": "table lamp 是放在桌上的燈。"
+    },
+    {
+      "letter": "L",
+      "word": "lock",
+      "zh": "鎖",
+      "emoji": "🔒",
+      "sentence": "A lock on the door.",
+      "translation": "門上的鎖。",
+      "note": "on the door 指在門上；老師在短語中間有停頓，切片保留完整短語。"
+    },
+    {
+      "letter": "L",
+      "word": "ladder",
+      "zh": "梯子",
+      "emoji": "🪜",
+      "sentence": "A wooden ladder.",
+      "translation": "一個木頭做的梯子。",
+      "note": "wooden 是木製的；ladder 是可用來攀爬的梯子。"
     }
   ],
   "phonics": {
@@ -538,6 +631,64 @@ window.PB_DATA = {
     "J": [
       "/dʒ/",
       "先阻住再放開，發 /dʒ/，如 jam、jelly、jacket 開頭。"
+    ],
+    "K": [
+      "/k/",
+      "舌頭後部輕抵軟顎，短促放開氣流，不加額外母音。"
+    ],
+    "L": [
+      "/l/",
+      "舌尖輕抵上門牙後方的齒齦，聲帶振動；字尾 L 常伴隨舌後部抬高。"
     ]
-  }
+  },
+  "tracks": [
+    {
+      "label": "A–B",
+      "source": "AB",
+      "letters": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "label": "C–D",
+      "source": "CD",
+      "letters": [
+        "C",
+        "D"
+      ]
+    },
+    {
+      "label": "E",
+      "source": "E",
+      "letters": [
+        "E"
+      ]
+    },
+    {
+      "label": "F–G",
+      "source": "FG",
+      "letters": [
+        "F",
+        "G"
+      ]
+    },
+    {
+      "label": "H–J",
+      "source": "HIJ",
+      "letters": [
+        "H",
+        "I",
+        "J"
+      ]
+    },
+    {
+      "label": "K–L",
+      "source": "KL",
+      "letters": [
+        "K",
+        "L"
+      ]
+    }
+  ]
 };

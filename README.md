@@ -1,22 +1,22 @@
-# CHAC 英文系統 V63.3｜正式精簡完整版
+# CHAC 英文系統 V63.4｜K–L 教材擴充版
 
-此專案是 GitHub Pages 靜態網站（PWA），包含 A–J 共 10 個字母、54 個單字的蠟筆字卡、遊戲圖片、老師原始錄音及分段教學。
+此專案是 GitHub Pages 靜態網站（PWA），包含 A–L 共 12 個字母、64 個單字的蠟筆字卡、遊戲圖片、老師原始錄音及分段教學。
 
 ## 資料夾與程式
 
 - `index.html`、`style.css`：網站結構、桌機/平板/手機響應式畫面。
-- `data.js`、`lesson.js`：54 個單字、中文、例句與字母發音教學。
+- `data.js`、`lesson.js`：64 個單字、中文、例句與字母發音教學。
 - `app.js`、`v55-ui.js`、`v6.js`：首頁、字母切換、一般字卡與專注學習。
 - `v3.js`、`spell-game.js`、`game-scope.js`：五種遊戲及練習範圍。
 - `clipmap.js`、`teacher-segments.js`：老師原始錄音切點、片段與共同教學群組。
 - `v11.js`、`v16.js`、`v17.js`、`v20.js`：小型互動及既有功能模組，現有頁面仍載入，不要隨意刪除。
-- `audio/`：AB、CD、E、FG、HIJ 五個原始錄音及 `teacher-segments/` 44 份實際錄音片段。
-- `assets/card-art/`：54 張無文字蠟筆字卡（900×640）；含新汽車引擎與粉紅色信封。
-- `assets/game-pictures/`：54 張無文字遊戲圖（700×700）。
+- `audio/`：AB、CD、E、FG、HIJ、KL 六個原始錄音及 `teacher-segments/` 54 份實際錄音片段。
+- `assets/card-art/`：64 張無文字蠟筆字卡（900×640）；含新汽車引擎與粉紅色信封。
+- `assets/game-pictures/`：64 張無文字遊戲圖（700×700）。
 - `assets/scenes/`：老師短句的情境補充插圖及資料。
 - `assets/ui/`、`assets/pwa/`：UI 蠟筆圖標及安裝圖示。
 - `manifest.webmanifest`、`sw.js`、`pwa-register.js`：PWA 與快取。
-- `addons/manifest.js`：保留給之後新增 K–Z 的擴充入口，目前未啟用任何外掛。
+- `addons/manifest.js`：保留給之後新增 M–Z 的擴充入口，目前未啟用任何外掛。
 
 ## 安裝到 GitHub Pages
 
@@ -32,3 +32,9 @@ GitHub 網頁介面每次建議上傳少於 100 個檔案，因此分為：01 �
 - 老師原音完整檔與已切好的片段都保留；部分錄音的逐字起訖秒數仍需人工試聽，不應視為最終校正完成。
 - 「英文朗讀」使用裝置的瀏覽器語音引擎；「老師原音」來自本專案錄音檔，是兩個不同功能。
 - V63.3 以刪除確定不用的資源與精簡圖示為主，不更改原有學習紀錄鍵值。
+
+## V63.4
+- K–L 各 5 字；錄音依實際內容獨立分段，無強制共同教學。
+- `data.js` 的 `tracks` 決定各字母完整錄音，新增課程不再修改 app.js 的字母判斷。
+- K–L 切點由課程內容及波形停頓定位，精確邊界仍需逐段人工試聽；原音未改寫。
+- 保持原有本機學習紀錄鍵與 A–J 教材。

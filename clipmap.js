@@ -248,3 +248,88 @@ window.PB_TEACHER_GROUPS = {"A": ["apple", "ant"], "B": ["ball", "bed"], "C": ["
 Object.assign(window.PB_CLIPS, {"house":{"src":"audio/teacher-segments/house.m4a","start":0,"end":19.88,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":"H-intro"},"hat":{"src":"audio/teacher-segments/house.m4a","start":0,"end":19.88,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":"H-intro"},"hair":{"src":"audio/teacher-segments/hair.m4a","start":19.88,"end":26.12,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"horse":{"src":"audio/teacher-segments/horse.m4a","start":26.12,"end":31.65,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"hand":{"src":"audio/teacher-segments/hand.m4a","start":31.65,"end":44.8,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"insect":{"src":"audio/teacher-segments/insect.m4a","start":44.8,"end":65.94,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":"I-intro"},"ink":{"src":"audio/teacher-segments/insect.m4a","start":44.8,"end":65.94,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":"I-intro"},"ill":{"src":"audio/teacher-segments/ill.m4a","start":65.94,"end":69.81,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"inch":{"src":"audio/teacher-segments/inch.m4a","start":69.81,"end":79.51,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"invitation":{"src":"audio/teacher-segments/invitation.m4a","start":79.51,"end":99.87,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"jam":{"src":"audio/teacher-segments/jam.m4a","start":99.87,"end":119.18,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":"J-intro"},"jelly":{"src":"audio/teacher-segments/jam.m4a","start":99.87,"end":119.18,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":"J-intro"},"jacket":{"src":"audio/teacher-segments/jacket.m4a","start":119.18,"end":140.51,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"jug":{"src":"audio/teacher-segments/jug.m4a","start":140.51,"end":158.04,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"jar":{"src":"audio/teacher-segments/jar.m4a","start":158.04,"end":177.66,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null},"jungle":{"src":"audio/teacher-segments/jungle.m4a","start":177.66,"end":184.157,"source":"HIJ","status":"silence-midpoint-adjusted-pending-listening","group":null}});
 Object.assign(window.PB_TEACHER_GROUPS, {"H":["house","hat"],"I":["insect","ink"],"J":["jam","jelly"]});
 window.CHAC_AUDIO_DURATIONS = Object.assign(window.CHAC_AUDIO_DURATIONS||{}, {HIJ:184.157});
+
+/* K–L: independently aligned segments; no forced pairing. */
+Object.assign(window.PB_CLIPS, {
+  "king": {
+    "src": "audio/teacher-segments/king.m4a",
+    "start": 0,
+    "end": 14.97,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "key": {
+    "src": "audio/teacher-segments/key.m4a",
+    "start": 14.97,
+    "end": 22.26,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "kettle": {
+    "src": "audio/teacher-segments/kettle.m4a",
+    "start": 22.26,
+    "end": 29.2,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "kite": {
+    "src": "audio/teacher-segments/kite.m4a",
+    "start": 29.2,
+    "end": 38.6,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "kitchen": {
+    "src": "audio/teacher-segments/kitchen.m4a",
+    "start": 38.6,
+    "end": 45.48,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "lion": {
+    "src": "audio/teacher-segments/lion.m4a",
+    "start": 45.48,
+    "end": 62.1,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "leaf": {
+    "src": "audio/teacher-segments/leaf.m4a",
+    "start": 68.9,
+    "end": 78.49,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "lamp": {
+    "src": "audio/teacher-segments/lamp.m4a",
+    "start": 78.49,
+    "end": 86.83,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "lock": {
+    "src": "audio/teacher-segments/lock.m4a",
+    "start": 86.83,
+    "end": 97.23,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  },
+  "ladder": {
+    "src": "audio/teacher-segments/ladder.m4a",
+    "start": 97.23,
+    "end": 104.5,
+    "source": "KL",
+    "status": "transcript-silence-aligned-pending-manual-boundary-review",
+    "group": null
+  }
+});
+Object.assign(window.CHAC_AUDIO_DURATIONS, {KL:104.512});
