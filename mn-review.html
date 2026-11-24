@@ -1,54 +1,19 @@
 <!doctype html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#edf5fb"><title>CHAC V63.7｜M–N 老師原音核對</title>
-<style>
-:root {font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;color:#26334b;background:#f5f7f9;font-synthesis:none}
-*{box-sizing:border-box}body{margin:0}button,input,textarea{font:inherit}button{cursor:pointer;border:1px solid #ccd8e2;border-radius:10px;background:#fff;padding:9px 12px;color:#26334b}button:hover{background:#eff6fc}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #4b98ec;outline-offset:2px}
-a{color:#235c91}h1{font-size:1.43rem;margin:.1em 0 .5em}h2{font-size:1.12rem;margin:0 0 10px}p{line-height:1.65}.small,.help{font-size:.86rem;color:#64738a}.warn{padding:12px 14px;background:#fff8e7;border-left:3px solid #e5ac43;border-radius:7px;line-height:1.6}
-.header{background:#fff;border-bottom:1px solid #dbe5ee;padding:18px max(16px,calc((100vw - 1180px)/2))}.header p{margin:5px 0}.header a{display:inline-block;margin-bottom:12px}.container{max-width:1180px;margin:auto;padding:18px}.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin:10px 0 20px}.primary{background:#327ed0;color:#fff;border-color:#327ed0}.primary:hover{background:#276bb4}.complete{background:#e4f5e9;border-color:#57b47a;color:#17633d}.layout{display:grid;grid-template-columns:225px minmax(0,1fr);gap:16px;align-items:start}.panel{background:white;border:1px solid #dce4ec;border-radius:14px;padding:17px}.itemlist{display:grid;gap:7px}.item{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:left;gap:12px}.item.active{border-color:#2d7bc6;background:#eaf4ff;font-weight:700}.dot{font-size:.8rem;color:#75889c}.item.reviewed .dot{color:#298655}.image-status{font-size:.84rem;color:#68768a;margin:5px 0 0}.image-status.is-error{color:#aa4f1d;font-weight:600}.check-panel{background:#f1f7fc;border:1px solid #d4e3ef;padding:13px;border-radius:12px;margin:12px 0}.check-result{font-size:.87rem;white-space:pre-wrap;line-height:1.7;margin-top:8px}.upper{display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px;align-items:center}.picture{width:220px;height:158px;object-fit:contain;background:#f5f2eb;border-radius:12px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.fields label{display:grid;gap:4px;font-size:.87rem;font-weight:600;color:#45546c}.fields input,.fields textarea{width:100%;border:1px solid #cbd7e0;border-radius:8px;padding:10px;background:white;color:#182b45}.fields .wide{grid-column:1/-1}.fields textarea{min-height:66px;resize:vertical}.player{margin:14px 0}.player audio{width:100%;margin-bottom:10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.timeline{border:1px solid #d8e4ee;background:#f9fafb;border-radius:10px;padding:10px;margin:12px 0}.timeline canvas{display:block;width:100%;height:115px;touch-action:manipulation;cursor:crosshair}.timeline .ticks{display:flex;justify-content:space-between;color:#61758e;font-size:.77rem;font-variant-numeric:tabular-nums}.status{padding:8px 11px;border-radius:7px;background:#eff4fa;line-height:1.5;font-size:.9rem;margin-top:12px}.heading2{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}.heading2 .meta{font-size:.84rem;color:#65758a}.foot{margin:15px 0 30px;color:#64738a;font-size:.85rem;line-height:1.6}.separator{height:1px;background:#e9eef3;margin:16px 0}.count{font-size:.88rem;font-weight:700;color:#2d6ba9}
-@media(max-width:780px){.layout{grid-template-columns:1fr}.itemlist{grid-template-columns:repeat(5,minmax(0,1fr))}.item{font-size:.8rem;padding:9px 6px;display:block;text-align:center}.item .dot{display:block}.upper{grid-template-columns:150px 1fr}.picture{width:150px;height:115px}}
-@media(max-width:560px){.container{padding:10px}.panel{padding:13px}.itemlist{grid-template-columns:repeat(5,minmax(0,1fr))}.upper{grid-template-columns:1fr}.picture{width:100%;height:170px}.fields{grid-template-columns:1fr}.header{padding:15px}.actions button{flex:1 1 40%}.item{font-size:.73rem}}
-</style>
-</head>
-<body>
-<header class="header"><a href="index.html">← 返回 CHAC 英文系統</a><h1>M–N 老師原音核對工作台 <span class="small">V63.7</span></h1><p>以完整原始錄音為準，逐張核對英文單字、中文意思、老師真正說出的短語，以及起訖秒數。</p></header>
-<main class="container">
-<div class="warn"><strong>重要：</strong>下列初始英文單字與短語來自 V63.5 的<strong>暫定教材</strong>，不是已經完成逐字核對的老師原文。請聽完整原音確認；按「確認這張」代表你已親自核對。修改只會保存在這台裝置，匯出 JSON 後仍須整合到下一版 GitHub 系統，不會直接變更教材。</div>
-<div class="bar"><span id="progress" class="count">已核對 0 / 10</span><div class="actions"><button id="importBtn" type="button">匯入先前核對 JSON</button><button id="exportBtn" class="primary" type="button">匯出核對結果 JSON</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></div>
-<div class="check-panel" aria-label="資源載入檢查">
- <div class="actions"><button id="checkAssets" type="button" class="primary">🔍 檢查圖片與老師錄音</button><a id="openAudioDirect" href="audio/MN.m4a?v=637" target="_blank" rel="noopener">直接開啟老師原始錄音</a></div>
- <div id="assetReport" class="check-result" aria-live="polite">若圖片空白或錄音沒聲音，按「檢查圖片與老師錄音」顯示實際檔案狀況。</div>
-</div>
-<div class="layout">
- <aside class="panel"><h2>選擇單字 <span class="small">M–N</span></h2><div id="wordList" class="itemlist"></div></aside>
- <section class="panel">
-  <div class="heading2"><h2 id="wordHeading">載入中</h2><span id="wordState" class="meta">未確認</span></div>
-  <div class="upper"><div><img id="wordImage" class="picture" alt="蠟筆圖卡"><p id="imageStatus" class="image-status" role="status" aria-live="polite">圖片準備載入中</p></div><p class="help">核對時請注意<strong>圖案是否與實際單字相同</strong>。若老師說的是其他單字，請修改欄位並在下方備註；下一版須同步更換蠟筆圖與圖片檔名。</p></div>
-  <div class="separator"></div>
-  <h2>原音試聽與切點</h2>
-  <audio id="originalAudio" src="audio/MN.m4a?v=637" controls preload="metadata" playsinline aria-label="M–N 完整老師原始錄音"></audio>
-  <div class="timeline"><canvas id="wave" width="900" height="115" aria-label="完整錄音波形，點選可跳到對應秒數"></canvas><div class="ticks"><span>0:00</span><span>0:48</span><span>1:36</span><span>2:24</span><span>3:11</span></div></div>
-  <div class="actions"><button id="playClip" class="primary">▶ 播放目前候選片段</button><button id="playStart">聽開始前後</button><button id="playEnd">聽結束前後</button><button id="playAll">▶ 完整原音</button><button id="stopAudio">■ 停止</button></div>
-  <p id="audioStatus" class="status" role="status" aria-live="polite">先播放候選片段，再微調起訖秒數。</p>
-  <div class="separator"></div>
-  <h2>教材逐字核對</h2>
-  <div class="fields">
-    <label>英文單字<input id="word" autocomplete="off" spellcheck="false"></label>
-    <label>中文意思<input id="zh" autocomplete="off"></label>
-    <label>開始秒數<input id="start" type="number" min="0" max="191.13" step="0.01" inputmode="decimal"></label>
-    <label>結束秒數<input id="end" type="number" min="0" max="191.13" step="0.01" inputmode="decimal"></label>
-    <label class="wide">老師實際說出的英文短語（請依原音修正）<textarea id="sentence" spellcheck="false"></textarea></label>
-    <label class="wide">中文翻譯<textarea id="translation"></textarea></label>
-    <label class="wide">核對備註／聽不清楚的地方<textarea id="notes" placeholder="例如：字尾沒聽清楚；候選片段包含上一個字，需重新切割…"></textarea></label>
-  </div>
-  <p class="help">播放器已採用原始錄音指定秒數預聽，並非截好固定檔案的限制。需要更正單字時，請連同圖片名稱一起記在備註。</p>
-  <div class="actions"><button id="confirm" class="complete">✓ 確認這張已依原音核對</button><button id="unconfirm">改回待核對</button><button id="prevWord">← 上一張</button><button id="nextWord">下一張 →</button></div>
-  <div id="saveStatus" class="status" role="status" aria-live="polite">編輯後會自動保存在目前瀏覽器。</div>
- </section>
-</div>
-<p class="foot">資料安全：此工具不會上傳錄音或編輯內容到其他伺服器。本完整包含原始錄音與圖片。若部署時只上傳主程式、未上傳媒體，網頁仍會顯示但圖片或原音無法載入。若清除網站資料，本機草稿可能消失，請定期使用「匯出核對結果 JSON」備份。</p>
-</main>
-<script src="data.js?v=637"></script><script src="clipmap.js?v=637"></script><script src="mn-waveform.js?v=637"></script><script src="mn-review.js?v=637"></script>
-</body></html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CHAC V63.8｜M–N 原始錄音核對</title>
+<style>body{font-family:system-ui,'Noto Sans TC',sans-serif;background:#f6f7f8;color:#24334a;margin:auto;max-width:760px;padding:22px 16px;line-height:1.7}h1{font-size:24px}a,button{color:#15569b}audio{display:block;width:100%;margin:20px 0}button{padding:9px 12px;margin:3px;border:1px solid #bbc8d6;border-radius:10px;background:white;cursor:pointer}.note{background:#fff7e9;border:1px solid #eed7a6;padding:14px;border-radius:12px}textarea{width:100%;height:160px;font:inherit;box-sizing:border-box;border:1px solid #bbc8d6;border-radius:10px;padding:12px}small{color:#61718a}</style></head>
+<body><p><a href="index.html">← 返回 CHAC 學習首頁</a></p><h1>M–N 老師原始錄音（待轉錄）</h1>
+<div class="note"><strong>重要：這份錄音尚未得到可靠的逐字轉錄。</strong> 舊版 M–N 的 monkey／moon 等十個單字、短句及對應切點均屬推測，不能作為老師實際教學內容的證據。這裡只播放未改動的原始音檔，不再顯示猜測圖片或配對。</div>
+<audio id="record" controls preload="metadata"><source src="audio/MN.m4a" type="audio/mp4">瀏覽器不支援音檔播放。</audio>
+<p>跳轉原音大致位置（只分時間，不判定詞語）：</p>
+<div id="jump"></div>
+<h2>錄音核對備註（非自動轉錄）</h2><p><small>若你聽出單字或例句，可記在這裡；儲存只發生在此瀏覽器，不會更動正式教材。工具無法自行判斷聲音內容。</small></p>
+<textarea id="notes" aria-label="原音備註" placeholder="依實際聽到的內容記錄，不必照舊字卡順序"></textarea>
+<p><button id="save">儲存本機備註</button><button id="export">下載備註文字檔</button></p><p id="msg" role="status"></p>
+<script>
+const a=document.querySelector('#record'),j=document.querySelector('#jump'),n=document.querySelector('#notes'),msg=document.querySelector('#msg');
+for(let s=0;s<=180;s+=15){const b=document.createElement('button');b.textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');b.onclick=()=>{a.currentTime=s;a.play().catch(()=>{msg.textContent='播放未啟動。請先按播放器上的播放鍵。'})};j.appendChild(b)}
+const key='chac-v638-mn-raw-audio-notes';try{n.value=localStorage.getItem(key)||''}catch(e){}
+document.querySelector('#save').onclick=()=>{try{localStorage.setItem(key,n.value);msg.textContent='備註已儲存在這台裝置'}catch(e){msg.textContent='儲存失敗，請使用下載備註'}};
+document.querySelector('#export').onclick=()=>{const blob=new Blob(['M–N 原音人工備註（非自動轉錄）\n\n'+n.value],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob),e=document.createElement('a');e.href=url;e.download='CHAC_MN_原音核對備註.txt';e.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+a.addEventListener('error',()=>msg.textContent='音檔讀取失敗，請確認 GitHub 內有 audio/MN.m4a');
+</script></body></html>

@@ -1,3 +1,4 @@
+/* V63.8: M/N guessed word-to-audio mappings are NOT verified. No active M/N flashcards depend on these records. */
 window.PB_CLIPS = {
   "apple": {
     "start": 0.0,
