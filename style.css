@@ -375,3 +375,11 @@ header{background:#fff;}
   #learnSection,#wordgrid{scroll-margin-top:75px;}
   .wordcard{scroll-margin-top:75px;}
 }
+
+/* V63.9: pending M/N lessons remain navigable without misleading vocabulary cards */
+.pending-letter-card{background:#fffdf7;border:1px solid #eadfcd;border-radius:18px;padding:clamp(16px,3vw,28px);max-width:760px;margin:14px auto 32px;display:grid;gap:12px;line-height:1.7;color:#314053}
+.pending-letter-card h3{margin:0;color:#253e61}
+.pending-letter-card p{margin:0}
+.pending-letter-card audio{display:block;width:100%;max-width:640px}
+.pending-letter-card a{font-weight:700;text-decoration:underline;color:#135c9a}
+.pending-letter-card small{display:block;color:#65758d}

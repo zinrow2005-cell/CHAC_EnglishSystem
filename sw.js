@@ -1,6 +1,6 @@
 /* CHAC英文系統 v63.7 — scoped GitHub Pages PWA service worker */
-const CACHE = 'chac-english-v638-shell';
-const MEDIA = 'chac-english-v638-media';
+const CACHE = 'chac-english-v639-shell';
+const MEDIA = 'chac-english-v639-media';
 const MAX_MEDIA_ITEMS = 260;
 const SHELL = [
   './', './index.html', './style.css', './app.js', './data.js', './lesson.js',
