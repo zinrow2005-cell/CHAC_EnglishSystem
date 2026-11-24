@@ -1,12 +1,12 @@
-/* CHAC英文系統 v63.4 — scoped GitHub Pages PWA service worker */
-const CACHE = 'chac-english-v634-shell';
-const MEDIA = 'chac-english-v634-media';
+/* CHAC英文系統 v63.6 — scoped GitHub Pages PWA service worker */
+const CACHE = 'chac-english-v636-shell';
+const MEDIA = 'chac-english-v636-media';
 const MAX_MEDIA_ITEMS = 260;
 const SHELL = [
   './', './index.html', './style.css', './app.js', './data.js', './lesson.js',
   './v55-ui.js', './game-scope.js', './spell-game.js', './v3.js', './v6.js', './v11.js', './v16.js', './v17.js', './v20.js',
   './clipmap.js', './teacher-segments.js', './addons/manifest.js', './assets/scenes/scenes.js', './pwa-register.js',
-  './manifest.webmanifest', './assets/pwa/icon-192.png', './assets/pwa/icon-512.png',
+  './mn-review.html', './mn-review.js', './mn-waveform.js', './manifest.webmanifest', './assets/pwa/icon-192.png', './assets/pwa/icon-512.png',
   './assets/pwa/icon-180.png'
 ];
 self.addEventListener('install', event => {

@@ -581,7 +581,7 @@ window.PB_DATA = {
       "translation": "門上的鎖。",
       "note": "on the door 指在門上；老師在短語中間有停頓，切片保留完整短語。"
     },
-    {
+{
       "letter": "L",
       "word": "ladder",
       "zh": "梯子",
@@ -589,6 +589,116 @@ window.PB_DATA = {
       "sentence": "A wooden ladder.",
       "translation": "一個木頭做的梯子。",
       "note": "wooden 是木製的；ladder 是可用來攀爬的梯子。"
+    },
+    {
+      "letter": "M",
+      "word": "monkey",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "猴子",
+      "emoji": "🐒",
+      "sentence": "A little monkey.",
+      "translation": "一隻小猴子。",
+      "note": "monkey 是猴子。這次 M–N 錄音為依老師新錄音做的暫定擴充，單字與切點建議再做人工試聽確認。"
+    },
+    {
+      "letter": "M",
+      "word": "moon",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "月亮",
+      "emoji": "🌙",
+      "sentence": "A bright moon.",
+      "translation": "一輪明亮的月亮。",
+      "note": "moon 是月亮；bright 表示明亮的。"
+    },
+    {
+      "letter": "M",
+      "word": "mouth",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "嘴巴",
+      "emoji": "👄",
+      "sentence": "An open mouth.",
+      "translation": "一張張開的嘴巴。",
+      "note": "mouth 是嘴巴；發音時注意 th 的尾音。"
+    },
+    {
+      "letter": "M",
+      "word": "mushroom",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "蘑菇",
+      "emoji": "🍄",
+      "sentence": "A red mushroom.",
+      "translation": "一朵紅色的蘑菇。",
+      "note": "mushroom 是蘑菇；圖片畫成紅色童趣蘑菇方便幼兒辨識。"
+    },
+    {
+      "letter": "M",
+      "word": "mouse",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "老鼠",
+      "emoji": "🐭",
+      "sentence": "A small mouse.",
+      "translation": "一隻小老鼠。",
+      "note": "mouse 是老鼠；複數為 mice（補充）。"
+    },
+    {
+      "letter": "N",
+      "word": "nose",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "鼻子",
+      "emoji": "👃",
+      "sentence": "A long nose.",
+      "translation": "一個長長的鼻子。",
+      "note": "nose 是鼻子；長母音 o 在 nose 中較明顯。"
+    },
+    {
+      "letter": "N",
+      "word": "nurse",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "護士",
+      "emoji": "🧑‍⚕️",
+      "sentence": "A kind nurse.",
+      "translation": "一位親切的護士。",
+      "note": "nurse 是護士；kind 表示親切的。"
+    },
+    {
+      "letter": "N",
+      "word": "net",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "網子",
+      "emoji": "🕸️",
+      "sentence": "A fishing net.",
+      "translation": "一個捕魚網。",
+      "note": "net 是網子；圖片採手持網的形式方便辨認。"
+    },
+    {
+      "letter": "N",
+      "word": "nest",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "鳥巢",
+      "emoji": "🪺",
+      "sentence": "A bird nest.",
+      "translation": "一個鳥巢。",
+      "note": "nest 是鳥巢；圖中有鳥蛋幫助理解。"
+    },
+    {
+      "letter": "N",
+      "word": "nail",
+      "reviewStatus": "pending-audio-verification",
+      "sentenceSource": "editorial-draft-not-teacher-transcript",
+      "zh": "釘子",
+      "emoji": "🔩",
+      "sentence": "A shiny nail.",
+      "translation": "一根亮亮的釘子。",
+      "note": "nail 在這裡是釘子，不是手指甲。"
     }
   ],
   "phonics": {
@@ -639,6 +749,14 @@ window.PB_DATA = {
     "L": [
       "/l/",
       "舌尖輕抵上門牙後方的齒齦，聲帶振動；字尾 L 常伴隨舌後部抬高。"
+    ],
+    "M": [
+      "/m/",
+      "雙唇閉合、聲帶振動，讓氣流從鼻腔通過，像 humming 一樣。"
+    ],
+    "N": [
+      "/n/",
+      "舌尖抵上齒齦、聲帶振動，讓氣流從鼻腔通過，是清楚的鼻音。"
     ]
   },
   "tracks": [
@@ -688,6 +806,14 @@ window.PB_DATA = {
       "letters": [
         "K",
         "L"
+      ]
+    },
+    {
+      "label": "M–N",
+      "source": "MN",
+      "letters": [
+        "M",
+        "N"
       ]
     }
   ]
