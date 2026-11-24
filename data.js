@@ -1,4 +1,4 @@
-/* CHAC A–L 64 validated lesson cards; MN recording archived without guessed vocabulary. */
+/* CHAC A–N 75 verified word/phrase entries, source: teacher audio transcript. */
 window.PB_DATA = {
   "words": [
     {
@@ -589,6 +589,105 @@ window.PB_DATA = {
       "sentence": "A wooden ladder.",
       "translation": "一個木頭做的梯子。",
       "note": "wooden 是木製的；ladder 是可用來攀爬的梯子。"
+    },
+    {
+      "letter": "M",
+      "word": "mommy",
+      "zh": "媽媽",
+      "emoji": "",
+      "sentence": "Mommy is mopping.",
+      "translation": "媽媽正在拖地。",
+      "note": "Mommy 指媽媽；老師用 Mommy is mopping. 介紹媽媽正在拖地。"
+    },
+    {
+      "letter": "M",
+      "word": "mop",
+      "zh": "拖把；拖地",
+      "emoji": "",
+      "sentence": "Mommy is mopping.",
+      "translation": "媽媽正在拖地。",
+      "note": "mop 可當名詞「拖把」，也可當動詞「拖地」；mopping 是正在拖地。"
+    },
+    {
+      "letter": "M",
+      "word": "monkey",
+      "zh": "猴子",
+      "emoji": "",
+      "sentence": "A brown monkey.",
+      "translation": "一隻棕色的猴子。",
+      "note": "brown 指咖啡色、棕色。"
+    },
+    {
+      "letter": "M",
+      "word": "milk",
+      "zh": "牛奶",
+      "emoji": "",
+      "sentence": "A carton of milk.",
+      "translation": "一盒紙盒裝的牛奶。",
+      "note": "carton 是紙盒、紙盒包裝；老師以盒裝鮮奶舉例。"
+    },
+    {
+      "letter": "M",
+      "word": "man",
+      "zh": "男士；男人",
+      "emoji": "",
+      "sentence": "An old man.",
+      "translation": "一位老先生。",
+      "note": "man 是成年男子；old man 可表示老先生。"
+    },
+    {
+      "letter": "M",
+      "word": "mirror",
+      "zh": "鏡子",
+      "emoji": "",
+      "sentence": "A round mirror.",
+      "translation": "一面圓形的鏡子。",
+      "note": "round 是圓形的。"
+    },
+    {
+      "letter": "N",
+      "word": "nut",
+      "zh": "堅果",
+      "emoji": "",
+      "sentence": "Nut in a nutshell.",
+      "translation": "堅果在堅果殼裡。",
+      "note": "nutshell 是堅果的殼；老師另說 shell 是外殼。"
+    },
+    {
+      "letter": "N",
+      "word": "nail",
+      "zh": "釘子；指甲",
+      "emoji": "",
+      "sentence": "A box of nails.",
+      "translation": "一盒釘子。",
+      "note": "nail 可指釘子或指甲；fingernail 是手指甲。圖卡使用釘子。"
+    },
+    {
+      "letter": "N",
+      "word": "net",
+      "zh": "網子；漁網",
+      "emoji": "",
+      "sentence": "A fish net.",
+      "translation": "一張漁網。",
+      "note": "fish net 指捕魚用的網。"
+    },
+    {
+      "letter": "N",
+      "word": "needle",
+      "zh": "針；縫衣針",
+      "emoji": "",
+      "sentence": "A long needle.",
+      "translation": "一根長長的針。",
+      "note": "老師示範 needle，並提醒 L 發音時舌尖碰上門牙後方。"
+    },
+    {
+      "letter": "N",
+      "word": "nest",
+      "zh": "鳥巢",
+      "emoji": "",
+      "sentence": "Eggs in the nest.",
+      "translation": "鳥巢裡有蛋。",
+      "note": "nest 是鳥巢；eggs 是 egg 的複數。"
     }
   ],
   "phonics": {
@@ -642,11 +741,11 @@ window.PB_DATA = {
     ],
     "M": [
       "/m/",
-      "鼻音 /m/：兩唇合攏發聲；此為一般發音參考，老師課堂文字尚待核對。"
+      "老師示範閉緊雙唇發出鼻音 /m/；字尾 M 也要雙唇閉合。練習 mommy、mop、monkey。"
     ],
     "N": [
       "/n/",
-      "鼻音 /n/：舌尖接近上齒齦，氣流從鼻腔通過；此為一般發音參考，老師課堂文字尚待核對。"
+      "老師示範 /n/ 鼻音；與 /m/ 不同，雙唇不用閉合，舌尖抵上齒齦。字尾 N 保留鼻音，不另加母音。"
     ]
   },
   "tracks": [
@@ -699,13 +798,12 @@ window.PB_DATA = {
       ]
     },
     {
-      "label": "M–N 老師原音",
+      "label": "M–N",
       "source": "MN",
       "letters": [
         "M",
         "N"
-      ],
-      "status": "audio-archive"
+      ]
     }
   ]
 };

@@ -376,5 +376,5 @@ header{background:#fff;}
   .wordcard{scroll-margin-top:75px;}
 }
 
-/* v63.6 official teaching mode: do not ask parents/students to review recordings manually. */
+/* v63.6.2 official teaching mode: do not ask parents/students to review recordings manually. */
 .v6-clip-editor{display:none!important}

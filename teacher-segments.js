@@ -54,3 +54,6 @@ Object.assign(window.CHAC_SEGMENTS, {
     "group": null
   }
 });
+
+/* M–N teacher segments: transcript-supported, paragraph-level boundaries. */
+Object.assign(window.CHAC_SEGMENTS, {"mommy":{"file":"audio/teacher-segments/mommy.m4a","status":"descript-transcript-time-aligned","group":"M"},"mop":{"file":"audio/teacher-segments/mommy.m4a","status":"descript-transcript-time-aligned","group":"M"},"monkey":{"file":"audio/teacher-segments/monkey.m4a","status":"descript-transcript-time-aligned","group":null},"milk":{"file":"audio/teacher-segments/milk.m4a","status":"descript-transcript-time-aligned","group":null},"man":{"file":"audio/teacher-segments/man.m4a","status":"descript-transcript-time-aligned","group":null},"mirror":{"file":"audio/teacher-segments/mirror.m4a","status":"descript-transcript-time-aligned","group":null},"nut":{"file":"audio/teacher-segments/nut.m4a","status":"descript-transcript-time-aligned","group":null},"nail":{"file":"audio/teacher-segments/nail.m4a","status":"descript-transcript-time-aligned","group":null},"net":{"file":"audio/teacher-segments/net.m4a","status":"descript-transcript-time-aligned","group":null},"needle":{"file":"audio/teacher-segments/needle.m4a","status":"descript-transcript-time-aligned","group":null},"nest":{"file":"audio/teacher-segments/nest.m4a","status":"descript-transcript-time-aligned","group":null}});
