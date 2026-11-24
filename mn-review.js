@@ -2,7 +2,7 @@
  'use strict';
  const $ = id => document.getElementById(id);
  const sourceIds=['monkey','moon','mouth','mushroom','mouse','nose','nurse','net','nest','nail'];
- const KEY='CHAC_MN_AudioReview_V636';
+ const KEY='CHAC_MN_AudioReview_V636'; // keep key for draft compatibility
  const total=191.125333;
  const source = window.PB_DATA?.words || [];
  const base = Object.fromEntries(sourceIds.map(id=>{
@@ -14,7 +14,7 @@
  function safeSave(){try{localStorage.setItem(KEY,JSON.stringify({words:drafts,updatedAt:new Date().toISOString()}));$('saveStatus').textContent='✓ 目前修改已存到這台裝置。'}catch{$('saveStatus').textContent='目前瀏覽器無法保存草稿，請使用匯出 JSON 備份。'}}
  let drafts={...base}; const old=safeRead();
  if(old?.words){for(const id of sourceIds){if(old.words[id]&&typeof old.words[id]==='object')drafts[id]={...base[id],...old.words[id],sourceWord:id};}}
- let selected=sourceIds[0],endAt=null,playMode='',animationId=0;
+ let selected=sourceIds[0],endAt=null,playMode='',animationId=0, playbackToken=0, imageEpoch=0;
  const audio=$('originalAudio');
  function fmt(secs){secs=Math.max(0,Number(secs)||0);return `${Math.floor(secs/60)}:${String(Math.floor(secs%60)).padStart(2,'0')}`}
  function validateCut(d){return Number.isFinite(Number(d.start))&&Number.isFinite(Number(d.end))&&Number(d.start)>=0&&Number(d.end)<=total+0.08&&Number(d.end)>Number(d.start)+0.3}
@@ -32,21 +32,57 @@
  function updateHeading(){const d=drafts[selected];$('wordHeading').textContent=`${d.letter}${d.letter.toLowerCase()} · ${d.word}`;$('wordState').textContent=d.confirmed?'✓ 人工已核對':'⚠️ 暫定教材（待核對）'}
  function choose(id){ if(!sourceIds.includes(id))return;stop(); selected=id;const d=drafts[id];
   for(const k of ['word','zh','sentence','translation','notes','start','end'])$(k).value= d[k];
-  const img=$('wordImage');img.src=`assets/card-art/${encodeURIComponent(id)}.jpg?v=636`;img.alt=`${d.zh}（暫定 ${d.word}）蠟筆插圖`;
+  const img=$('wordImage'), picStatus=$('imageStatus'), epoch=++imageEpoch;
+  img.alt=`${d.zh}（暫定 ${d.word}）蠟筆插圖`;
+  picStatus.classList.remove('is-error');picStatus.textContent='正在載入圖片…';
+  img.onload=()=>{if(epoch!==imageEpoch)return;picStatus.classList.remove('is-error');picStatus.textContent='✓ 圖片已載入';};
+  let usingFallback=false;
+  img.onerror=()=>{if(epoch!==imageEpoch)return;
+    if(!usingFallback){usingFallback=true;picStatus.textContent='主圖未載入，嘗試遊戲備用圖…';img.src=`assets/game-pictures/${encodeURIComponent(id)}.jpg?v=637`;}
+    else{picStatus.classList.add('is-error');picStatus.textContent=`✕ 找不到 ${id} 圖片；請上傳 assets/card-art/${id}.jpg 及 assets/game-pictures/${id}.jpg`;img.removeAttribute('src');}
+  };
+  img.removeAttribute('src');img.src=`assets/card-art/${encodeURIComponent(id)}.jpg?v=637`;
   $('saveStatus').textContent='編輯後會自動保存在目前瀏覽器。';showList();updateHeading();drawWave();flash(`候選片段 ${fmt(d.start)}–${fmt(d.end)}。請親自核對原音內容。`);
  }
- function stop(){endAt=null;playMode='';audio.pause();flash('已停止播放。')}
- async function play(a,b,label){
+ function stop(){playbackToken++;endAt=null;playMode='';audio.pause();audio.muted=false;flash('已停止播放。')}
+ // Always start play() *inside the user's click handler*. Awaiting metadata first loses
+ // Safari's transient user gesture and may reject audio playback.
+ function play(a,b,label){
   if(!Number.isFinite(a)||a<0||a>total){flash('開始秒數不合理');return}
   if(b!==null && (!Number.isFinite(b)||b<=a+0.1||b>total+0.1)){flash('結束秒數不合理，請修改');return}
-  stop();endAt=b;playMode=label;
-  try{
-    if(audio.readyState===0) await new Promise((resolve,reject)=>{audio.addEventListener('loadedmetadata',resolve,{once:true});audio.addEventListener('error',reject,{once:true});audio.load()});
-    audio.currentTime=a;
-    await audio.play();
-    flash(`▶ ${label}：從 ${fmt(a)}${b===null?' 播至結束':` 播至 ${fmt(b)}`}`);
-  }catch(e){flash('無法播放原始錄音，請確認音檔已完整上傳 GitHub，並在瀏覽器點擊播放。')}
+  stop();const token=playbackToken;endAt=b;playMode=label;
+  let waitingForSeek=audio.readyState<1;
+  if(waitingForSeek && a>0)audio.muted=true;
+  const seek=()=>{
+    if(token!==playbackToken)return;
+    try{audio.currentTime=a;}catch(e){flash('正在定位錄音片段，請使用下方原生播放控制嘗試播放。');return}
+    if(waitingForSeek&&a>0){
+      const onSeeked=()=>{if(token===playbackToken)audio.muted=false};
+      audio.addEventListener('seeked',onSeeked,{once:true});
+      // Some mobile media implementations don't dispatch seeked when the target is buffered.
+      if(Math.abs(audio.currentTime-a)<0.15)audio.muted=false;
+    }
+    waitingForSeek=false;
+  };
+  if(waitingForSeek)audio.addEventListener('loadedmetadata',seek,{once:true});
+  else seek();
+  let pending;
+  try{pending=audio.play();}catch(e){flash(`播放被瀏覽器阻擋（${e.name||'Error'}）。請點原音播放器的 ▶，或按「直接開啟老師原始錄音」。`);return}
+  flash(`▶ 正在載入並播放 ${label}，目標 ${fmt(a)}${b===null?' 至結束':`–${fmt(b)}`}…`);
+  if(pending&&typeof pending.then==='function')pending.then(()=>{
+    if(token===playbackToken)flash(`▶ 正在播放 ${label}：${fmt(a)}${b===null?' 至結束':`–${fmt(b)}`}`);
+  }).catch(e=>{
+    if(token!==playbackToken)return;
+    audio.muted=false;
+    const msg=e?.name==='NotAllowedError'?'瀏覽器阻擋播放，請點播放器內的 ▶ 鍵。':
+      `無法播放（${e?.name||'Error'}），可能是 audio/MN.m4a 未上傳或網址有誤。請按上方資源檢查。`;
+    flash(msg);
+  });
  }
+ audio.addEventListener('error',()=>{
+   const code=audio.error?.code||0;
+   if(code)flash(`✕ 錄音載入錯誤（MediaError ${code}）：檢查 audio/MN.m4a 是否在 GitHub 與 index.html 同一層級下的 audio 資料夾。`);
+ });
  function currentCut(){saveForm();const d=drafts[selected];if(!validateCut(d)){flash('開始與結束秒數無效：必須介於 0～191.13 秒，結束需晚於開始。');return null}return d}
  $('playClip').addEventListener('click',()=>{const d=currentCut();if(d)play(d.start,d.end,`${d.word} 候選片段`)});
  $('playStart').addEventListener('click',()=>{const d=currentCut();if(d)play(Math.max(0,d.start-2),Math.min(total,d.start+3.5),`${d.word} 開頭前後`)});
@@ -82,6 +118,24 @@
    }catch(err){$('saveStatus').textContent='匯入失敗：請選擇由本核對頁匯出的 JSON。'}
    e.target.value='';
  });
+
+ async function verifyOne(path){
+   try{const res=await fetch(path,{cache:'no-store'});return res.ok?{ok:true,status:res.status}:{ok:false,status:res.status};}
+   catch(e){return{ok:false,status:'網路連線或網站路徑失敗'}}
+ }
+ $('checkAssets').addEventListener('click',async()=>{
+   const report=$('assetReport');const btn=$('checkAssets');btn.disabled=true;
+   report.textContent='正在逐張檢查圖片及老師原音檔…';
+   try{
+     const items=[...sourceIds.map(id=>`assets/card-art/${id}.jpg?v=637`),'audio/MN.m4a?v=637'];
+     const results=await Promise.all(items.map(verifyOne));
+     const missing=items.filter((_,i)=>!results[i].ok).map((path,i)=>path+'（'+results[items.indexOf(path)].status+'）');
+     const imgs=results.slice(0,10).filter(x=>x.ok).length, sound=results[10].ok;
+     report.textContent=`圖片：${imgs}/10；完整錄音：${sound?'已找到':'找不到'}。`+
+       (missing.length?'\n缺少或無法讀取：\n'+missing.join('\n'):'\n✓ 所有 M–N 主圖與完整原音都可以從目前網站取得。若仍無聲，請點原音播放器 ▶ 檢查裝置音量與播放權限。');
+   }finally{btn.disabled=false}
+ });
+
  const canvas=$('wave'),ctx=canvas.getContext('2d');
  function drawWave(){
   if(!ctx)return;

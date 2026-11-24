@@ -333,3 +333,19 @@ Object.assign(window.PB_CLIPS, {
   }
 });
 Object.assign(window.CHAC_AUDIO_DURATIONS, {KL:104.512});
+
+
+/* M–N: best-effort silence-cluster alignment from the new teacher recording; manual lexical boundary review is still recommended. */
+Object.assign(window.PB_CLIPS, {
+  "monkey": {"src":"audio/teacher-segments/monkey.m4a","start":0.79,"end":30.61,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "moon": {"src":"audio/teacher-segments/moon.m4a","start":30.61,"end":37.63,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "mouth": {"src":"audio/teacher-segments/mouth.m4a","start":37.63,"end":47.16,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "mushroom": {"src":"audio/teacher-segments/mushroom.m4a","start":47.16,"end":62.80,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "mouse": {"src":"audio/teacher-segments/mouse.m4a","start":62.80,"end":87.08,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "nose": {"src":"audio/teacher-segments/nose.m4a","start":88.18,"end":114.29,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "nurse": {"src":"audio/teacher-segments/nurse.m4a","start":114.29,"end":128.81,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "net": {"src":"audio/teacher-segments/net.m4a","start":128.81,"end":143.69,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "nest": {"src":"audio/teacher-segments/nest.m4a","start":143.69,"end":167.48,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null},
+  "nail": {"src":"audio/teacher-segments/nail.m4a","start":167.48,"end":191.08,"source":"MN","status":"silence-cluster-aligned-pending-manual-review","group":null}
+});
+Object.assign(window.CHAC_AUDIO_DURATIONS, {MN:191.125});

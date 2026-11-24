@@ -54,3 +54,17 @@ Object.assign(window.CHAC_SEGMENTS, {
     "group": null
   }
 });
+
+
+Object.assign(window.CHAC_SEGMENTS, {
+  "monkey": {"file": "audio/teacher-segments/monkey.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "moon": {"file": "audio/teacher-segments/moon.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "mouth": {"file": "audio/teacher-segments/mouth.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "mushroom": {"file": "audio/teacher-segments/mushroom.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "mouse": {"file": "audio/teacher-segments/mouse.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "nose": {"file": "audio/teacher-segments/nose.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "nurse": {"file": "audio/teacher-segments/nurse.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "net": {"file": "audio/teacher-segments/net.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "nest": {"file": "audio/teacher-segments/nest.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null},
+  "nail": {"file": "audio/teacher-segments/nail.m4a", "status": "silence-cluster-aligned-pending-manual-review", "group": null}
+});
