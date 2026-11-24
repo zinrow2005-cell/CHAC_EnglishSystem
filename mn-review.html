@@ -1,19 +1,25 @@
-<!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CHAC V63.9｜M–N 原始錄音核對</title>
-<style>body{font-family:system-ui,'Noto Sans TC',sans-serif;background:#f6f7f8;color:#24334a;margin:auto;max-width:760px;padding:22px 16px;line-height:1.7}h1{font-size:24px}a,button{color:#15569b}audio{display:block;width:100%;margin:20px 0}button{padding:9px 12px;margin:3px;border:1px solid #bbc8d6;border-radius:10px;background:white;cursor:pointer}.note{background:#fff7e9;border:1px solid #eed7a6;padding:14px;border-radius:12px}textarea{width:100%;height:160px;font:inherit;box-sizing:border-box;border:1px solid #bbc8d6;border-radius:10px;padding:12px}small{color:#61718a}</style></head>
-<body><p><a href="index.html">← 返回 A–N 字母課程</a></p><h1>M–N 老師原始錄音（待轉錄）</h1>
-<div class="note"><strong>重要：這份錄音尚未得到可靠的逐字轉錄。</strong> 舊版 M–N 的 monkey／moon 等十個單字、短句及對應切點均屬推測，不能作為老師實際教學內容的證據。這裡只播放未改動的原始音檔，不再顯示猜測圖片或配對。</div>
-<audio id="record" controls preload="metadata"><source src="audio/MN.m4a" type="audio/mp4">瀏覽器不支援音檔播放。</audio>
-<p>跳轉原音大致位置（只分時間，不判定詞語）：</p>
-<div id="jump"></div>
-<h2>錄音核對備註（非自動轉錄）</h2><p><small>若你聽出單字或例句，可記在這裡；儲存只發生在此瀏覽器，不會更動正式教材。工具無法自行判斷聲音內容。</small></p>
-<textarea id="notes" aria-label="原音備註" placeholder="依實際聽到的內容記錄，不必照舊字卡順序"></textarea>
-<p><button id="save">儲存本機備註</button><button id="export">下載備註文字檔</button></p><p id="msg" role="status"></p>
-<script>
-const a=document.querySelector('#record'),j=document.querySelector('#jump'),n=document.querySelector('#notes'),msg=document.querySelector('#msg');
-for(let s=0;s<=180;s+=15){const b=document.createElement('button');b.textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');b.onclick=()=>{a.currentTime=s;a.play().catch(()=>{msg.textContent='播放未啟動。請先按播放器上的播放鍵。'})};j.appendChild(b)}
-const key='chac-v638-mn-raw-audio-notes';try{n.value=localStorage.getItem(key)||''}catch(e){}
-document.querySelector('#save').onclick=()=>{try{localStorage.setItem(key,n.value);msg.textContent='備註已儲存在這台裝置'}catch(e){msg.textContent='儲存失敗，請使用下載備註'}};
-document.querySelector('#export').onclick=()=>{const blob=new Blob(['M–N 原音人工備註（非自動轉錄）\n\n'+n.value],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob),e=document.createElement('a');e.href=url;e.download='CHAC_MN_原音核對備註.txt';e.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
-a.addEventListener('error',()=>msg.textContent='音檔讀取失敗，請確認 GitHub 內有 audio/MN.m4a');
-</script></body></html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CHAC M–N 老師原音逐段核對</title><style>
+:root{font-family:ui-sans-serif,system-ui,"Noto Sans TC",sans-serif;color:#203346;background:#faf7ef}
+*{box-sizing:border-box}body{margin:0;padding:clamp(14px,3vw,32px)}main{max-width:980px;margin:auto}h1{font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.3}.muted{color:#576779}.header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}a,button{color:#245f8c}button,.link{background:#fff;border:1px solid #c7d8dd;border-radius:11px;padding:10px 13px;cursor:pointer;font-weight:600}button:hover{background:#e8f4f7}.primary{background:#236f8e;color:#fff;border:0}section{background:#fff;border:1px solid #e0dfd7;border-radius:14px;margin:14px 0;padding:16px;box-shadow:0 1px 3px #00000008}audio{width:100%;margin:10px 0}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.small{font-size:.86rem}label{display:block;margin:12px 0 6px;font-weight:650}textarea,input,select{border:1px solid #bccbd2;border-radius:9px;background:#fff;padding:10px;font:inherit;width:100%}textarea{resize:vertical;min-height:88px}.chip{border-radius:100px;background:#edf5f6;padding:6px 10px;color:#335c65}hr{border:0;border-top:1px solid #e7e7e7;margin:18px 0}p{line-height:1.7}</style></head><body><main>
+<div class="header"><div><div class="small muted">CHAC 英文學習系統 · V63.5-RC1</div><h1>🎧 M–N 老師原音逐段核對</h1></div><a class="link" href="index.html">返回字母教材</a></div>
+<section><p><strong>音檔已接入，但尚未取得可靠逐字轉錄。</strong> 以下音段依音量停頓粗分，<strong>不是</strong>老師單字的已驗證切點，也不代表 M、N 的分界。請逐段聽音後填入老師實際說的英文、中文及補充。</p><p class="muted small">完整錄音：PB 1 m-n.m4a → <code>audio/MN.m4a</code>，約 3 分 11 秒。此頁在你的裝置本機記錄輸入，不會上傳。</p><audio id="player" controls preload="metadata" src="audio/MN.m4a"></audio><div class="row"><button type="button" id="stop">停止播放</button><span id="status" role="status" class="chip">尚未播放</span></div></section>
+<div id="clips"></div>
+<section><h2>匯出校對資料</h2><p>完成後按下「下載校對 JSON」，再把該檔案傳給我。我就能依照核對內容正式建立 M–N 單字、逐字錄音片段、完整蠟筆字卡與遊戲圖。</p><div class="row"><button type="button" id="export" class="primary">下載校對 JSON</button><button type="button" id="clear">清空此頁的本機輸入</button><span class="small muted">如果尚未完成，可先下載部分內容。</span></div></section>
+</main><script>
+(()=>{'use strict';
+const ranges=[[0, 37.3], [37.3, 75.5], [75.5, 124.3], [124.3, 153.4], [153.4, 177.65], [177.65, 191.125]];
+const audio=document.getElementById('player'), container=document.getElementById('clips'), status=document.getElementById('status');
+let activeEnd=null;let source=[];const storeKey='chac-mn-review-v1';
+try{source=JSON.parse(localStorage.getItem(storeKey)||'[]')}catch{}
+const fmt=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+const esc=s=>String(s).replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
+container.innerHTML=ranges.map(([start,end],i)=>`<section><div class="row"><strong>片段 ${i+1}</strong><span class="chip">${fmt(start)}–${fmt(end)}（${(end-start).toFixed(1)}秒）</span><button type="button" data-play="${i}">▶ 播放這段</button></div><label for="letter${i}">這段主要字母（不確定可不選）</label><select id="letter${i}" data-field="letter" data-index="${i}"><option value="">尚未確定</option><option>M</option><option>N</option><option value="mixed">跨字母／其他</option></select><label for="en${i}">老師實際英文／字母發音</label><textarea id="en${i}" data-field="english" data-index="${i}" placeholder="逐字記錄英文單字、例句或發音提示；不確定處保留問號"></textarea><label for="zh${i}">中文說明、翻譯與補充</label><textarea id="zh${i}" data-field="chinese" data-index="${i}" placeholder="逐字記錄中文，以及圖片要畫的情境"></textarea></section>`).join('');
+function save(){const items=ranges.map(([start,end],i)=>({index:i+1,start,end,letter:document.getElementById(`letter${i}`).value,english:document.getElementById(`en${i}`).value.trim(),chinese:document.getElementById(`zh${i}`).value.trim()})); try{localStorage.setItem(storeKey,JSON.stringify(items))}catch{}return items}
+for(const [i,d] of (source||[]).entries()){if(i>=ranges.length)break;for(const k of ['letter','english','chinese']){const id=(k==='letter'?'letter':k==='english'?'en':'zh')+i; const el=document.getElementById(id);if(el)el.value=d[k]||''}}
+container.addEventListener('input',save);container.addEventListener('change',save);
+container.addEventListener('click',e=>{const button=e.target.closest('[data-play]');if(!button)return;const idx=Number(button.dataset.play),[start,end]=ranges[idx];activeEnd=end;audio.currentTime=start;audio.play().then(()=>{status.textContent=`正在播放片段 ${idx+1}`}).catch(()=>{status.textContent='請先按播放器播放，或檢查錄音檔有沒有上傳'})});
+audio.addEventListener('timeupdate',()=>{if(activeEnd!==null&&audio.currentTime>=activeEnd){audio.pause();activeEnd=null;status.textContent='片段播放完成'}});
+document.getElementById('stop').onclick=()=>{audio.pause();activeEnd=null;status.textContent='已停止播放'};
+document.getElementById('export').onclick=()=>{const payload={schema:'chac-mn-review-v1',recording:'audio/MN.m4a',durationSeconds:191.125,status:'manual-review',note:'時間是按音量停頓粗分，並非正式單字切點',segments:save()};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='CHAC_MN_人工校對記錄.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+document.getElementById('clear').onclick=()=>{if(!confirm('確定清空本頁所有文字嗎？'))return;for(const e of container.querySelectorAll('textarea,select'))e.value='';save()};
+})();</script></body></html>

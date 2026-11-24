@@ -1,0 +1,64 @@
+{
+  "schema": "CHAC-MN-PENDING-REVIEW-V1",
+  "sourceAudio": "audio/MN.m4a",
+  "originalFilename": "PB 1 m-n.m4a",
+  "durationSeconds": 191.125333,
+  "knownCompletedWords": 64,
+  "newLetters": [
+    "M",
+    "N"
+  ],
+  "transcriptStatus": "NOT_VERIFIED",
+  "candidateWordCards": [],
+  "segments": [
+    {
+      "index": 1,
+      "start": 0,
+      "end": 37.3,
+      "status": "silence-based-review-chunk-not-a-word-clip",
+      "english": null,
+      "chinese": null
+    },
+    {
+      "index": 2,
+      "start": 37.3,
+      "end": 75.5,
+      "status": "silence-based-review-chunk-not-a-word-clip",
+      "english": null,
+      "chinese": null
+    },
+    {
+      "index": 3,
+      "start": 75.5,
+      "end": 124.3,
+      "status": "silence-based-review-chunk-not-a-word-clip",
+      "english": null,
+      "chinese": null
+    },
+    {
+      "index": 4,
+      "start": 124.3,
+      "end": 153.4,
+      "status": "silence-based-review-chunk-not-a-word-clip",
+      "english": null,
+      "chinese": null
+    },
+    {
+      "index": 5,
+      "start": 153.4,
+      "end": 177.65,
+      "status": "silence-based-review-chunk-not-a-word-clip",
+      "english": null,
+      "chinese": null
+    },
+    {
+      "index": 6,
+      "start": 177.65,
+      "end": 191.125,
+      "status": "silence-based-review-chunk-not-a-word-clip",
+      "english": null,
+      "chinese": null
+    }
+  ],
+  "doNotGenerateImagesUntilTranscribed": true
+}

@@ -1,4 +1,4 @@
-/* CHAC V63.8: M/N flashcards temporarily removed: unverified transcription. Original MN audio retained. */
+/* CHAC 64 個已核對字卡；M、N 錄音已接入，單字待逐字核對，請勿假裝已有字卡。 */
 window.PB_DATA = {
   "words": [
     {
@@ -642,11 +642,11 @@ window.PB_DATA = {
     ],
     "M": [
       "/m/",
-      "雙唇閉合、聲帶振動，讓氣流從鼻腔通過，像 humming 一樣。"
+      "鼻音 /m/：兩唇合攏發聲；此為一般發音參考，老師課堂文字尚待核對。"
     ],
     "N": [
       "/n/",
-      "舌尖抵上齒齦、聲帶振動，讓氣流從鼻腔通過，是清楚的鼻音。"
+      "鼻音 /n/：舌尖接近上齒齦，氣流從鼻腔通過；此為一般發音參考，老師課堂文字尚待核對。"
     ]
   },
   "tracks": [
@@ -699,12 +699,17 @@ window.PB_DATA = {
       ]
     },
     {
-      "label": "M–N",
+      "label": "M–N（原音待校對）",
       "source": "MN",
       "letters": [
         "M",
         "N"
-      ]
+      ],
+      "status": "transcript-pending"
     }
+  ],
+  "pendingLetters": [
+    "M",
+    "N"
   ]
 };
