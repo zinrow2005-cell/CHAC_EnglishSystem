@@ -1,4 +1,4 @@
-/* CHAC 64 個已核對字卡；M、N 錄音已接入，單字待逐字核對，請勿假裝已有字卡。 */
+/* CHAC A–L 64 validated lesson cards; MN recording archived without guessed vocabulary. */
 window.PB_DATA = {
   "words": [
     {
@@ -699,17 +699,13 @@ window.PB_DATA = {
       ]
     },
     {
-      "label": "M–N（原音待校對）",
+      "label": "M–N 老師原音",
       "source": "MN",
       "letters": [
         "M",
         "N"
       ],
-      "status": "transcript-pending"
+      "status": "audio-archive"
     }
-  ],
-  "pendingLetters": [
-    "M",
-    "N"
   ]
 };
